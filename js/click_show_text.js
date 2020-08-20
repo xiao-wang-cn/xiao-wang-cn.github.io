@@ -32,7 +32,3 @@ function delay() {
 }
 
 
-作者: Yafine
-链接: https://yafine-blog.cn/posts/4ab2.html
-来源: 过客~励む
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
