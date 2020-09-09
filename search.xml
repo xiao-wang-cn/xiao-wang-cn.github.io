@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>java每日一考1</title>
+      <link href="/2020/09/09/javatest/"/>
+      <url>/2020/09/09/javatest/</url>
+      
+        <content type="html"><![CDATA[<h3 id="JDK、JRE、JVM三者之间关系，以及JDK、JRE包含的结构有哪些？"><a href="#JDK、JRE、JVM三者之间关系，以及JDK、JRE包含的结构有哪些？" class="headerlink" title="JDK、JRE、JVM三者之间关系，以及JDK、JRE包含的结构有哪些？"></a>JDK、JRE、JVM三者之间关系，以及JDK、JRE包含的结构有哪些？</h3><p>JDK：开发工具包（JRE+开发工具）<br>JRE：运行环境（JVM+核心类库）<br>JVM：虚拟机<br>实际的开发过程：我们利用JDK（调用java api）开发了我们的java程序，用JDK中javac命令将java文件编译成字节码文件，字节码文件在JRE上运行，JVM解析字节码</p><h3 id="为什么要配置path环境变量？如何配置？"><a href="#为什么要配置path环境变量？如何配置？" class="headerlink" title="为什么要配置path环境变量？如何配置？"></a>为什么要配置path环境变量？如何配置？</h3><p>（1）安装完软件后，在安装目录会出现一个“.exe”的文件，但是我们不可能记住每一个软件的安装位置<br>（2）在其他目录下想运行此软件也不行<br>所以需要配置环境变量，配置好后，会先在当前目录下寻找此程序，然后在path下寻找。<br><strong>如何配置</strong> ：把软件的安装路径放到path中</p><h3 id="常见的几个命令行操作有哪些？"><a href="#常见的几个命令行操作有哪些？" class="headerlink" title="常见的几个命令行操作有哪些？"></a>常见的几个命令行操作有哪些？</h3><p>javac 源文件名.java<br>java 类名<br>cd..<br>cd/<br>javadoc</p><h3 id="创建如下的类，使得运行可以输出："><a href="#创建如下的类，使得运行可以输出：" class="headerlink" title="创建如下的类，使得运行可以输出："></a>创建如下的类，使得运行可以输出：</h3><p>姓名：习大大</p><p>性别：男<br>家庭住址：北京中南海</p><p>(1)创建java文件：leader.java<br>(2)java文件中内容</p><pre class=" language-lang-bash"><code class="language-lang-bash">class leader&#123;    public static void main(String[] args)    &#123;        System.out.println("姓名：习大大");        System.out.println();        System.out.println("性别：男");        System.out.println("家庭住址：北京中南海");    &#125;&#125;</code></pre><h3 id="编译和运行上述代码的指令"><a href="#编译和运行上述代码的指令" class="headerlink" title="编译和运行上述代码的指令"></a>编译和运行上述代码的指令</h3><p>编译：</p><pre class=" language-lang-bash"><code class="language-lang-bash">javac leader.java</code></pre><p>运行：</p><pre class=" language-lang-bash"><code class="language-lang-bash">java leader</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>第一篇博客</title>
+      <link href="/2020/08/20/hello-world/"/>
+      <url>/2020/08/20/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>欢迎来到 <a href="https://hexo.io/">Hexo</a>! 这是基于hexo搭建的博客. 点击这个 <a href="https://hexo.io/docs/">文档</a> 可以获取更多信息. 如果你在使用hexo过程中，遇到一些问题，你可以在 <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> 和 <a href="https://github.com/hexojs/hexo/issues">GitHub</a>寻找答案.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-lang-bash"><code class="language-lang-bash">$ hexo new "My New Post"</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-lang-bash"><code class="language-lang-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-lang-bash"><code class="language-lang-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-lang-bash"><code class="language-lang-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> myblog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
