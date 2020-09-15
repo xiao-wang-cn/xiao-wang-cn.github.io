@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>java每日一考4</title>
+      <link href="/2020/09/15/javatest4/"/>
+      <url>/2020/09/15/javatest4/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、switch后面使用的表达式可以是哪些数据类型的？"><a href="#1、switch后面使用的表达式可以是哪些数据类型的？" class="headerlink" title="1、switch后面使用的表达式可以是哪些数据类型的？"></a>1、switch后面使用的表达式可以是哪些数据类型的？</h3><p>byte、short、char、int、枚举（jdk 5.0）、string(jdk 7.0)</p><h3 id="2、谈谈你对三元运算符、if-else和switch-case结构使用场景的理解"><a href="#2、谈谈你对三元运算符、if-else和switch-case结构使用场景的理解" class="headerlink" title="2、谈谈你对三元运算符、if-else和switch-case结构使用场景的理解"></a>2、谈谈你对三元运算符、if-else和switch-case结构使用场景的理解</h3><p>能用三元运算符和switch-case的场景，一定能用if-else<br>能用if-else的场景，不一定能用三元运算符和switch-case<br>若三者都能用的场景，用三元运算符或switch-case,执行效率高。</p><h3 id="3、如何从控制台获取String和int型的变量，并输出？"><a href="#3、如何从控制台获取String和int型的变量，并输出？" class="headerlink" title="3、如何从控制台获取String和int型的变量，并输出？"></a>3、如何从控制台获取String和int型的变量，并输出？</h3><pre class=" language-lang-bash"><code class="language-lang-bash">import java.util.Scanner;</code></pre><pre class=" language-lang-bash"><code class="language-lang-bash">Scanner scan = new Scanner(System.in);</code></pre><pre class=" language-lang-bash"><code class="language-lang-bash">int number = scan.nextInt();string str = scan.next();</code></pre><h3 id="4、使用for循环遍历100以内的奇数，并计算所有奇数的和并输出"><a href="#4、使用for循环遍历100以内的奇数，并计算所有奇数的和并输出" class="headerlink" title="4、使用for循环遍历100以内的奇数，并计算所有奇数的和并输出"></a>4、使用for循环遍历100以内的奇数，并计算所有奇数的和并输出</h3><pre class=" language-lang-bash"><code class="language-lang-bash">class BianSum&#123;    public static void main(String[] args)    &#123;        int sum = 0;        for (int i = 1;i <101 ;i++ )        &#123;            if (i % 2 != 0)            &#123;                System.out.println(i);                sum += i;            &#125;        &#125;        System.out.println("100以内奇数的和为：" + sum);    &#125;&#125;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> java基础学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java每日一考3</title>
       <link href="/2020/09/15/javatest3/"/>
       <url>/2020/09/15/javatest3/</url>
