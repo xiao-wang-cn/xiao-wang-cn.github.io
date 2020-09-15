@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>java每日一考3</title>
+      <link href="/2020/09/15/javatest3/"/>
+      <url>/2020/09/15/javatest3/</url>
+      
+        <content type="html"><![CDATA[<h3 id="amp-和-amp-amp-的异同"><a href="#amp-和-amp-amp-的异同" class="headerlink" title="&amp;和&amp;&amp;的异同"></a>&amp;和&amp;&amp;的异同</h3><p>相同：都是逻辑运算符，都是判断两边为真时，则语句成立<br>区别：&amp;&amp;当第一个条件不成立时，后边的条件都不执行了，而&amp;还是继续执行，直到整个条件语句执行完为止</p><h3 id="定义三个int型变量并赋值，使用三元运算符或if-else获取三个数中最大值"><a href="#定义三个int型变量并赋值，使用三元运算符或if-else获取三个数中最大值" class="headerlink" title="定义三个int型变量并赋值，使用三元运算符或if else获取三个数中最大值"></a>定义三个int型变量并赋值，使用三元运算符或if else获取三个数中最大值</h3><p><strong>三元运算符</strong></p><pre class=" language-lang-bash"><code class="language-lang-bash">class  ComMax&#123;    public static void main(String[] args)    &#123;        int x1 = 5;        int x2 =18;        int x3 = 3;        int max1 = (x1>x2)? x1 : x2;        int max2 = (max1>x3)? max1 : x3;        System.out.println("最大值为：" + max2);    &#125;&#125;</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java每日一考2</title>
       <link href="/2020/09/10/javatest2/"/>
       <url>/2020/09/10/javatest2/</url>
