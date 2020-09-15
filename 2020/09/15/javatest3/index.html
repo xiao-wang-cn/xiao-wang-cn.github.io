@@ -459,7 +459,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    151
+                    289
                 </div>
                 
 
@@ -488,6 +488,55 @@
         int max1 = (x1>x2)? x1 : x2;
         int max2 = (max1>x3)? max1 : x3;
         System.out.println("最大值为：" + max2);
+    &#125;
+&#125;
+</code></pre>
+<p><strong>if else</strong></p>
+<pre class=" language-lang-bash"><code class="language-lang-bash">class ComMax2
+&#123;
+    public static void main(String[] args)
+    &#123;
+        int x1 = 5;
+        int x2 =18;
+        int x3 = 3;
+        if(x1>x2 && x1>x3)
+        &#123;
+            System.out.println("最大值为:" + x1);
+        &#125;
+        else if(x2>x1 && x2>x3)
+        &#123;
+            System.out.println("最大值为" + x2);
+        &#125;
+        else if (x3>x1 && x3>x2)
+        &#123;
+            System.out.println("最大值为" + x3);
+        &#125;
+
+    &#125;
+&#125;
+</code></pre>
+<h3 id="编写程序，声明两个double变量并赋值，判断第一个数大于10-0，且第二个数小于20-0，打印两数之和，否则，打印两数之积"><a href="#编写程序，声明两个double变量并赋值，判断第一个数大于10-0，且第二个数小于20-0，打印两数之和，否则，打印两数之积" class="headerlink" title="编写程序，声明两个double变量并赋值，判断第一个数大于10.0，且第二个数小于20.0，打印两数之和，否则，打印两数之积"></a>编写程序，声明两个double变量并赋值，判断第一个数大于10.0，且第二个数小于20.0，打印两数之和，否则，打印两数之积</h3><pre class=" language-lang-bash"><code class="language-lang-bash">class  Test3
+&#123;
+    public static void main(String[] args)
+    &#123;
+        double x1 = 10;
+        double x2 = 12;
+        double res = (x1>10 && x2<20)? x1+x2 : x1*x2;
+        System.out.println("打印结果为：" + res);
+    &#125;
+&#125;
+</code></pre>
+<h3 id="交换两个变量值的代码实现"><a href="#交换两个变量值的代码实现" class="headerlink" title="交换两个变量值的代码实现"></a>交换两个变量值的代码实现</h3><pre class=" language-lang-bash"><code class="language-lang-bash">class Exchange
+&#123;
+    public static void main(String[] args)
+    &#123;
+        int x1 = 15;
+        int x2 = 20;
+        System.out.println("交换前x1为：" + x1 + "交换前x2为：" + x2);
+        int temp = x1;
+         x1 = x2;
+         x2 =temp;
+        System.out.println("交换后x1为：" + x1 + "交换后x2为：" + x2);
     &#125;
 &#125;
 </code></pre>
