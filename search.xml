@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>java每日一考6</title>
+      <link href="/2020/09/20/javatest6/"/>
+      <url>/2020/09/20/javatest6/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、写出一维数组初始化的两种方式："><a href="#1、写出一维数组初始化的两种方式：" class="headerlink" title="1、写出一维数组初始化的两种方式："></a>1、写出一维数组初始化的两种方式：</h3><p>①动态初始化：<strong>数组声明且为数组元素分配空间</strong>与<strong>赋值操作</strong>分开进行</p><pre class=" language-lang-bash"><code class="language-lang-bash">int[] arr = new int[3];arr[0] = 3;arr[1] = 5;arr[2] = 8;</code></pre><p>②静态初始化：在定义数组的同时，就为数组元素分配空间并赋值。</p><pre class=" language-lang-bash"><code class="language-lang-bash">int[] arr = new int[]&#123;2,5,8&#125;;</code></pre><h3 id="2、不同类型的一维数组元素的默认初始化值各是多少？"><a href="#2、不同类型的一维数组元素的默认初始化值各是多少？" class="headerlink" title="2、不同类型的一维数组元素的默认初始化值各是多少？"></a>2、不同类型的一维数组元素的默认初始化值各是多少？</h3><div class="table-container"><table><thead><tr><th style="text-align:center">数组元素类型</th><th style="text-align:center">默认初始化值</th></tr></thead><tbody><tr><td style="text-align:center">byte</td><td style="text-align:center">0</td></tr><tr><td style="text-align:center">short</td><td style="text-align:center">0</td></tr><tr><td style="text-align:center">int</td><td style="text-align:center">0</td></tr><tr><td style="text-align:center">long</td><td style="text-align:center">0L</td></tr><tr><td style="text-align:center">float</td><td style="text-align:center">0.0</td></tr><tr><td style="text-align:center">double</td><td style="text-align:center">0.0</td></tr><tr><td style="text-align:center">char</td><td style="text-align:center">0</td></tr><tr><td style="text-align:center">boolean</td><td style="text-align:center">false</td></tr><tr><td style="text-align:center">引用数据类型</td><td style="text-align:center">null</td></tr></tbody></table></div><h3 id="3、一维数组内存解析："><a href="#3、一维数组内存解析：" class="headerlink" title="3、一维数组内存解析："></a>3、一维数组内存解析：</h3><p><strong>String[] strs = new String[5];</strong></p><p><strong>Strs[2] = “Tom”;</strong></p><p><strong>Strs = new String[3];</strong></p><p><img src="interStore.jpg" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java基础学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java每日一考5</title>
       <link href="/2020/09/18/javatest5/"/>
       <url>/2020/09/18/javatest5/</url>
