@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>java每日一考7</title>
+      <link href="/2020/09/24/javatest7/"/>
+      <url>/2020/09/24/javatest7/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、使用冒泡排序，实现如下的数组从小到大排序int-arr-new-int-34-5-22-98-6-76-0-3"><a href="#1、使用冒泡排序，实现如下的数组从小到大排序int-arr-new-int-34-5-22-98-6-76-0-3" class="headerlink" title="1、使用冒泡排序，实现如下的数组从小到大排序int[] arr = new int[] {34,5,22,-98,6,-76,0,-3};"></a>1、使用冒泡排序，实现如下的数组从小到大排序int[] arr = new int[] {34,5,22,-98,6,-76,0,-3};</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java;public class BubbleSort2 &#123;    public static void main(String[] args) &#123;        //使用冒泡排序，实现如下的数组从小到大排序        //int[] arr = new int[] &#123;34,5,22,-98,6,-76,0,-3&#125;;        int[] arr = new int[] &#123;34,5,22,-98,6,-76,0,-3&#125;;        for(int i = 0;i < arr.length ;i++) &#123;            for(int j = 0;j < arr.length - i - 1;j++) &#123;                if(arr[j] > arr[j+1]) &#123;                    int temp = arr[j];                    arr[j] = arr[j + 1];                    arr[j + 1] = temp;                &#125;            &#125;        &#125;        //遍历输出        for(int i = 0;i < arr.length;i++) &#123;            System.out.print(arr[i] + "   ");        &#125;    &#125;&#125;</code></pre><h3 id="2、如何反转上面的数组，请代码实现"><a href="#2、如何反转上面的数组，请代码实现" class="headerlink" title="2、如何反转上面的数组，请代码实现"></a>2、如何反转上面的数组，请代码实现</h3><p><strong>int[] arr = new int[] {34,5,22,-98,6,-76,0,-3};</strong></p><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java;public class Reverse2 &#123;    public static void main(String[] args) &#123;        //反转下面的数组        //int[] arr = new int[] &#123;34,5,22,-98,6,-76,0,-3&#125;;        int[] arr = new int[] &#123;34,5,22,-98,6,-76,0,-3&#125;;        for(int i = 0;i < arr.length/2;i++) &#123;            int temp = arr[i];            arr[i] = arr[arr.length - i - 1];            arr[arr.length - i - 1] = temp;        &#125;        //遍历输出        for(int i = 0;i < arr.length;i++) &#123;            System.out.print(arr[i] + "   ");        &#125;    &#125;&#125;</code></pre><h3 id="3、复制上述数组，得到一个新的数组"><a href="#3、复制上述数组，得到一个新的数组" class="headerlink" title="3、复制上述数组，得到一个新的数组"></a>3、复制上述数组，得到一个新的数组</h3><p><strong>int[] arr = new int[] {34,5,22,-98,6,-76,0,-3};</strong></p><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java;public class Copy3 &#123;    public static void main(String[] args) &#123;        //复制上述数组，得到一个新的数组        //int[] arr1 = new int[] &#123;34,5,22,-98,6,-76,0,-3&#125;;        int[] arr1 = new int[] &#123;34,5,22,-98,6,-76,0,-3&#125;;        int[] arr2 = new int[arr1.length];        for(int i = 0;i < arr1.length;i++) &#123;            arr2[i] = arr1[i];        &#125;        //遍历输出        for(int i = 0;i < arr2.length;i++) &#123;            System.out.print(arr2[i] + "   ");        &#125;        //换行        System.out.println();        //输出两个数组地址,验证是复制，有两个地址        System.out.println(arr1);        System.out.println(arr2);    &#125;</code></pre><h3 id="4、使用线性查找，从上述数组中查找22是否存在，存在，返回所在位置索引，不存在，输出提示信息"><a href="#4、使用线性查找，从上述数组中查找22是否存在，存在，返回所在位置索引，不存在，输出提示信息" class="headerlink" title="4、使用线性查找，从上述数组中查找22是否存在，存在，返回所在位置索引，不存在，输出提示信息"></a>4、使用线性查找，从上述数组中查找22是否存在，存在，返回所在位置索引，不存在，输出提示信息</h3><pre class=" language-lang-bash"><code class="language-lang-bash">/* * 使用线性查找，从上述数组中查找22是否存在， * 存在，返回所在位置索引，不存在，输出提示信息 * int[] arr = new int[] &#123;34,5,22,-98,6,-76,0,-3&#125;; */package xiao.wang.java;public class LineFind &#123;    public static void main(String[] args) &#123;        int[] arr = new int[] &#123;34,5,22,-98,6,-76,0,-3&#125;;        //要查找的数        int dest = 22;        //立一个标志，查找到，变为false，没找到，为true        boolean isFind = true;        for(int i = 0;i < arr.length;i++) &#123;            if(arr[i] == dest) &#123;                System.out.println("查找到了，位置为" + i);                isFind = false;                break;            &#125;        &#125;        if(isFind) &#123;            System.out.println("很遗憾，没有找到");        &#125;    &#125;&#125;</code></pre><h3 id="5、数组中常见的异常有哪些？"><a href="#5、数组中常见的异常有哪些？" class="headerlink" title="5、数组中常见的异常有哪些？"></a>5、数组中常见的异常有哪些？</h3><p><strong>①数组角标越界异常</strong></p><pre class=" language-lang-bash"><code class="language-lang-bash">int[] arr = new int[2];System.out.println(arr[2]);System.out.println(arr[-1]);</code></pre><p>访问到了数组中不存在的角标时发生</p><p><strong>②空指针异常</strong></p><pre class=" language-lang-bash"><code class="language-lang-bash">int[] arr = null;System.out.println(arr[0]);</code></pre><p>arr引用没有指向实体，却在操作实体中的元素</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java基础学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java每日一考6</title>
       <link href="/2020/09/20/javatest6/"/>
       <url>/2020/09/20/javatest6/</url>
