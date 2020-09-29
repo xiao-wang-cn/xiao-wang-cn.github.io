@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>java每日一考9</title>
+      <link href="/2020/09/29/javatest9/"/>
+      <url>/2020/09/29/javatest9/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、什么是方法的重载"><a href="#1、什么是方法的重载" class="headerlink" title="1、什么是方法的重载"></a>1、什么是方法的重载</h3><p>在同一个类中，允许存在一个以上的同名方法，只要他们的参数个数或参数类型不同即可。</p><p> <strong>两同一不同</strong>：同一个类，同一个方法，参数列表不同</p><h3 id="2、说明Java方法中的参数传递机制的具体体现"><a href="#2、说明Java方法中的参数传递机制的具体体现" class="headerlink" title="2、说明Java方法中的参数传递机制的具体体现"></a>2、说明Java方法中的参数传递机制的具体体现</h3><p>形参：方法声明时的参数</p><p>实参：方法调用时实际传给形参的参数值</p><p>形参是<strong>基本数据类型</strong>：将实参基本数据类型变量的<strong>数据值</strong>传递给形参</p><p>形参是<strong>引用数据类型</strong>：将实参引用数据类型变量的<strong>地址值</strong>（含变量数据类型）传递给实参</p><h3 id="3、成员变量（属性）和局部变量在声明的位置上、是否有默认初始化值，是否有权限修饰符修饰，内存分配的位置上有何不同"><a href="#3、成员变量（属性）和局部变量在声明的位置上、是否有默认初始化值，是否有权限修饰符修饰，内存分配的位置上有何不同" class="headerlink" title="3、成员变量（属性）和局部变量在声明的位置上、是否有默认初始化值，是否有权限修饰符修饰，内存分配的位置上有何不同"></a>3、成员变量（属性）和局部变量在声明的位置上、是否有默认初始化值，是否有权限修饰符修饰，内存分配的位置上有何不同</h3><div class="table-container"><table><thead><tr><th style="text-align:center">区别</th><th style="text-align:center">成员变量</th><th style="text-align:center">局部变量  </th></tr></thead><tbody><tr><td style="text-align:center"> 声明的位置</td><td style="text-align:center">直接声明在类中</td><td style="text-align:center">方法形参或内部、代码块内、构造器内 </td></tr><tr><td style="text-align:center">修饰符</td><td style="text-align:center">private、public、static、final等</td><td style="text-align:center">不能用权限修饰符修饰，可以用final修饰 </td></tr><tr><td style="text-align:center">初始化值</td><td style="text-align:center">有默认初始化值</td><td style="text-align:center">没有默认初始化值 </td></tr><tr><td style="text-align:center">内存加载位置</td><td style="text-align:center">堆空间或静态域内</td><td style="text-align:center">栈空间 </td></tr></tbody></table></div><h3 id="4、谈谈return关键字的使用"><a href="#4、谈谈return关键字的使用" class="headerlink" title="4、谈谈return关键字的使用"></a>4、谈谈return关键字的使用</h3><p>①结束方法</p><p>②针对于有返回值的方法：return+返回值</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java基础学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java每日一考8</title>
       <link href="/2020/09/27/javatest8/"/>
       <url>/2020/09/27/javatest8/</url>
