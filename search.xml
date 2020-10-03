@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>java每日一考10</title>
+      <link href="/2020/10/03/javatest10/"/>
+      <url>/2020/10/03/javatest10/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、构造器的作用是什么？使用过程中有哪些注意点？"><a href="#1、构造器的作用是什么？使用过程中有哪些注意点？" class="headerlink" title="1、构造器的作用是什么？使用过程中有哪些注意点？"></a>1、构造器的作用是什么？使用过程中有哪些注意点？</h3><p><strong>作用</strong>：</p><p>①创建对象<br>②给对象进行初始化</p><p><strong>注意点</strong>：</p><p>①具有与类相同的名称</p><p>②一个类中一定有构造器</p><p>③不声明返回值</p><p>④不能被static、final、synchronized、abstract、native修饰，不能有return语句返回值</p><h3 id="2、关于类的属性的赋值，有几种赋值的方式，谈谈赋值的先后顺序"><a href="#2、关于类的属性的赋值，有几种赋值的方式，谈谈赋值的先后顺序" class="headerlink" title="2、关于类的属性的赋值，有几种赋值的方式，谈谈赋值的先后顺序"></a>2、关于类的属性的赋值，有几种赋值的方式，谈谈赋值的先后顺序</h3><p><strong>赋值方式</strong>：</p><p>①默认初始化</p><p>②显示初始化</p><p>③构造器中初始化</p><p>④通过”对象.属性”或”对象.方法”的方式赋值</p><p><strong>赋值先后顺序</strong>：①-②-③-④</p><h3 id="3、this关键字可以调用哪些结构，简要说明一下使用"><a href="#3、this关键字可以调用哪些结构，简要说明一下使用" class="headerlink" title="3、this关键字可以调用哪些结构，简要说明一下使用"></a>3、this关键字可以调用哪些结构，简要说明一下使用</h3><p>this可以调用类的属性、方法和构造器</p><p>调用属性：this.name = name;</p><p>调用方法：this.eat();</p><p>调用同一类中无参构造器：this();</p><p>调用同一类中重载的其他构造器：this(形参列表)</p><h3 id="4、Java中目前学习涉及到的四种权限修饰符有哪些？并说明各自的权限范围"><a href="#4、Java中目前学习涉及到的四种权限修饰符有哪些？并说明各自的权限范围" class="headerlink" title="4、Java中目前学习涉及到的四种权限修饰符有哪些？并说明各自的权限范围"></a>4、Java中目前学习涉及到的四种权限修饰符有哪些？并说明各自的权限范围</h3><p><strong>四种权限修饰符</strong>：public、protected、缺省、private</p><div class="table-container"><table><thead><tr><th style="text-align:center">修饰符</th><th style="text-align:center">类内部</th><th style="text-align:center">同一个包</th><th style="text-align:center">不同包的子类</th><th style="text-align:center">同一个工程</th></tr></thead><tbody><tr><td style="text-align:center"> private</td><td style="text-align:center">yes</td><td style="text-align:center"></td><td style="text-align:center"></td><td style="text-align:center"></td></tr><tr><td style="text-align:center">缺省</td><td style="text-align:center">yes</td><td style="text-align:center">yes</td><td style="text-align:center"></td><td style="text-align:center"></td></tr><tr><td style="text-align:center">protected</td><td style="text-align:center">yes</td><td style="text-align:center">yes</td><td style="text-align:center">yes</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">public</td><td style="text-align:center">yes</td><td style="text-align:center">yes</td><td style="text-align:center">yes</td><td style="text-align:center">yes </td></tr></tbody></table></div><h3 id="5、创建Circle类，提供私有的radius属性，提供相应的get和set方法，提供求圆面积的方法"><a href="#5、创建Circle类，提供私有的radius属性，提供相应的get和set方法，提供求圆面积的方法" class="headerlink" title="5、创建Circle类，提供私有的radius属性，提供相应的get和set方法，提供求圆面积的方法"></a>5、创建Circle类，提供私有的radius属性，提供相应的get和set方法，提供求圆面积的方法</h3><p><strong>Circle类中</strong></p><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java;public class Circle &#123;    //属性    private double radius;//半径    //方法    //设置圆半径    public void setRadius(double radius) &#123;        this.radius = radius;    &#125;    //获取圆半径的值    public double getRadius() &#123;        return radius;    &#125;    //求圆面积    public double area(double i) &#123;        double area = Math.PI * i * i;        return area;    &#125;&#125;</code></pre><p><strong>CircleTest类中</strong></p><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java;public class CircleTest &#123;    public static void main(String[] args) &#123;        //创建对象        Circle c = new Circle();        //调用方法        //设置圆的半径        c.setRadius(2);        System.out.println("圆的半径为：" + c.getRadius());        System.out.println("圆的面积为：" + c.area(c.getRadius()));    &#125;&#125;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> java基础学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java每日一考9</title>
       <link href="/2020/09/29/javatest9/"/>
       <url>/2020/09/29/javatest9/</url>
