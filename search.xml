@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>java每日一考13</title>
+      <link href="/2020/10/14/javatest13/"/>
+      <url>/2020/10/14/javatest13/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、static修饰的属性，相较于实例变量，有哪些特别之处（-gt-3点）"><a href="#1、static修饰的属性，相较于实例变量，有哪些特别之处（-gt-3点）" class="headerlink" title="1、static修饰的属性，相较于实例变量，有哪些特别之处（&gt;=3点）"></a>1、static修饰的属性，相较于实例变量，有哪些特别之处（&gt;=3点）</h3><p>①随着类的加载而加载</p><p>②早于对象的创建</p><p>③只要权限允许，可以通过”对象.static属性”的方式进行调用，</p><p>④存在于方法区的静态域</p><h3 id="2、final可以用来修饰哪些结构，分别表示什么意思？"><a href="#2、final可以用来修饰哪些结构，分别表示什么意思？" class="headerlink" title="2、final可以用来修饰哪些结构，分别表示什么意思？"></a>2、final可以用来修饰哪些结构，分别表示什么意思？</h3><p>修饰类时，类不能被继承</p><p>修饰方法时，方法不能被子类重写</p><p>修饰变量时，变量称为常量</p><h3 id="3、类的属性赋值的位置有哪些？先后顺序为何？"><a href="#3、类的属性赋值的位置有哪些？先后顺序为何？" class="headerlink" title="3、类的属性赋值的位置有哪些？先后顺序为何？"></a>3、类的属性赋值的位置有哪些？先后顺序为何？</h3><p>默认初始化</p><p>显示初始化、代码块中初始化</p><p>构造器中初始化</p><p>通过”对象.属性”或”对象.方法”的方式赋值</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java基础学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java每日一考12</title>
       <link href="/2020/10/12/javatest12/"/>
       <url>/2020/10/12/javatest12/</url>
