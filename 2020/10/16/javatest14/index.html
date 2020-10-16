@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="java每日一考13, HTML, CSS, JavaScript, JQuery, React, Vue.js等">
+    <meta name="keywords" content="java每日一考14, HTML, CSS, JavaScript, JQuery, React, Vue.js等">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>java每日一考13 | xiao-wang</title>
+    <title>java每日一考14 | xiao-wang</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">java每日一考13</h1>
+                    <h1 class="description center-align post-title">java每日一考14</h1>
                 </div>
             </div>
         </div>
@@ -459,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-14
+                    2020-10-16
                 </div>
                 
 
@@ -468,7 +468,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    186
+                    336
                 </div>
                 
 
@@ -485,17 +485,46 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1、static修饰的属性，相较于实例变量，有哪些特别之处（-gt-3点）"><a href="#1、static修饰的属性，相较于实例变量，有哪些特别之处（-gt-3点）" class="headerlink" title="1、static修饰的属性，相较于实例变量，有哪些特别之处（&gt;=3点）"></a>1、static修饰的属性，相较于实例变量，有哪些特别之处（&gt;=3点）</h3><p>①随着类的加载而加载</p>
-<p>②早于对象的创建</p>
-<p>③只要权限允许，可以通过”对象.static属性”的方式进行调用，</p>
-<p>④存在于方法区的静态域</p>
-<h3 id="2、final可以用来修饰哪些结构，分别表示什么意思？"><a href="#2、final可以用来修饰哪些结构，分别表示什么意思？" class="headerlink" title="2、final可以用来修饰哪些结构，分别表示什么意思？"></a>2、final可以用来修饰哪些结构，分别表示什么意思？</h3><p>修饰类时，类不能被继承</p>
-<p>修饰方法时，方法不能被子类重写</p>
-<p>修饰变量时，变量称为常量</p>
-<h3 id="3、类的属性赋值的位置有哪些？先后顺序为何？"><a href="#3、类的属性赋值的位置有哪些？先后顺序为何？" class="headerlink" title="3、类的属性赋值的位置有哪些？先后顺序为何？"></a>3、类的属性赋值的位置有哪些？先后顺序为何？</h3><p>默认初始化</p>
-<p>显示初始化、代码块中初始化</p>
-<p>构造器中初始化</p>
-<p>通过”对象.属性”或”对象.方法”的方式赋值</p>
+                <h3 id="1、abstract能修饰哪些结构？修饰以后，有什么特点？"><a href="#1、abstract能修饰哪些结构？修饰以后，有什么特点？" class="headerlink" title="1、abstract能修饰哪些结构？修饰以后，有什么特点？"></a>1、abstract能修饰哪些结构？修饰以后，有什么特点？</h3><p>类、方法</p>
+<p>类不能实例化，提供子类</p>
+<p>抽象方法，只定义了一种功能的标准，需要子类去实现</p>
+<h3 id="2、接口是否能继承接口？抽象类是否能实现（implements）接口？抽象类是否能继承非抽象的类？"><a href="#2、接口是否能继承接口？抽象类是否能实现（implements）接口？抽象类是否能继承非抽象的类？" class="headerlink" title="2、接口是否能继承接口？抽象类是否能实现（implements）接口？抽象类是否能继承非抽象的类？"></a>2、接口是否能继承接口？抽象类是否能实现（implements）接口？抽象类是否能继承非抽象的类？</h3><p>是，是，是</p>
+<h3 id="3、抽象类和接口有哪些共同点和区别？"><a href="#3、抽象类和接口有哪些共同点和区别？" class="headerlink" title="3、抽象类和接口有哪些共同点和区别？"></a>3、抽象类和接口有哪些共同点和区别？</h3><p>共同点：不能实例化，都可以被继承</p>
+<p>不同点：</p>
+<p>抽象类：有构造器，有单继承的限制</p>
+<p>接口：不能声明构造器，允许继承多个接口</p>
+<h3 id="4、声明抽象类，并包含抽象方法。测试类中创建一个继承抽象类的匿名子类的对象"><a href="#4、声明抽象类，并包含抽象方法。测试类中创建一个继承抽象类的匿名子类的对象" class="headerlink" title="4、声明抽象类，并包含抽象方法。测试类中创建一个继承抽象类的匿名子类的对象"></a>4、声明抽象类，并包含抽象方法。测试类中创建一个继承抽象类的匿名子类的对象</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang2.java;
+/*
+ * 声明抽象类，并包含抽象方法。
+ */
+public abstract class AA &#123;
+
+    public abstract void method();
+&#125;
+</code></pre>
+<pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang2.java;
+/*
+ * 测试类中创建一个继承抽象类的匿名子类的对象
+ */
+public class AATest &#123;
+
+    public static void main(String[] args) &#123;
+        AA a = new AA() &#123;
+            public void method() &#123;
+                System.out.println("输出AA");
+            &#125;
+        &#125;;
+        a.method();
+    &#125;
+&#125;
+</code></pre>
+<h3 id="4、如何创建静态成员内部类和非静态成员内部类的对象？"><a href="#4、如何创建静态成员内部类和非静态成员内部类的对象？" class="headerlink" title="4、如何创建静态成员内部类和非静态成员内部类的对象？"></a>4、如何创建静态成员内部类和非静态成员内部类的对象？</h3><pre class=" language-lang-bash"><code class="language-lang-bash">// 创建静态成员内部类的对象
+Person.Dog  dog = new Person.Dog();
+</code></pre>
+<pre class=" language-lang-bash"><code class="language-lang-bash">//创建非静态成员内部类的对象
+Person p = new Person();
+Person.Bird bird = p.new Bird();
+</code></pre>
 
             </div>
             <hr/>
@@ -521,7 +550,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xiao-wang-cn.github.io/2020/10/14/javatest13/">https://xiao-wang-cn.github.io/2020/10/14/javatest13/</a>
+                    <a href="https://xiao-wang-cn.github.io/2020/10/16/javatest14/">https://xiao-wang-cn.github.io/2020/10/16/javatest14/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -991,9 +1020,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/10/16/javatest14/">
                     <div class="card-image">
@@ -1014,9 +1044,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1029,6 +1059,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1047,30 +1078,28 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/10/12/javatest12/">
+                <a href="/2020/10/14/javatest13/">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/4.jpg" class="responsive-img" alt="java每日一考12">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/3.jpg" class="responsive-img" alt="java每日一考13">
                         
-                        <span class="card-title">java每日一考12</span>
+                        <span class="card-title">java每日一考13</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1、如何实现向下转型？需要注意什么问题？如何解决此问题？使用强转符
-可能ClassCastException异常
-使用instanceof在进行向下转型前判断
-if(p instanceof Man)&#123;
-&#125;
-
-p:变量名
+                            1、static修饰的属性，相较于实例变量，有哪些特别之处（&gt;=3点）①随着类的加载而加载
+②早于对象的创建
+③只要权限允许，可以通过”对象.static属性”的方式进行调用，
+④存在于方法区的静态域
+2、final可以用来修饰哪些结
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-14
                             </span>
                         <span class="publish-author">
                             

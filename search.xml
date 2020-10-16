@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>java每日一考14</title>
+      <link href="/2020/10/16/javatest14/"/>
+      <url>/2020/10/16/javatest14/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、abstract能修饰哪些结构？修饰以后，有什么特点？"><a href="#1、abstract能修饰哪些结构？修饰以后，有什么特点？" class="headerlink" title="1、abstract能修饰哪些结构？修饰以后，有什么特点？"></a>1、abstract能修饰哪些结构？修饰以后，有什么特点？</h3><p>类、方法</p><p>类不能实例化，提供子类</p><p>抽象方法，只定义了一种功能的标准，需要子类去实现</p><h3 id="2、接口是否能继承接口？抽象类是否能实现（implements）接口？抽象类是否能继承非抽象的类？"><a href="#2、接口是否能继承接口？抽象类是否能实现（implements）接口？抽象类是否能继承非抽象的类？" class="headerlink" title="2、接口是否能继承接口？抽象类是否能实现（implements）接口？抽象类是否能继承非抽象的类？"></a>2、接口是否能继承接口？抽象类是否能实现（implements）接口？抽象类是否能继承非抽象的类？</h3><p>是，是，是</p><h3 id="3、抽象类和接口有哪些共同点和区别？"><a href="#3、抽象类和接口有哪些共同点和区别？" class="headerlink" title="3、抽象类和接口有哪些共同点和区别？"></a>3、抽象类和接口有哪些共同点和区别？</h3><p>共同点：不能实例化，都可以被继承</p><p>不同点：</p><p>抽象类：有构造器，有单继承的限制</p><p>接口：不能声明构造器，允许继承多个接口</p><h3 id="4、声明抽象类，并包含抽象方法。测试类中创建一个继承抽象类的匿名子类的对象"><a href="#4、声明抽象类，并包含抽象方法。测试类中创建一个继承抽象类的匿名子类的对象" class="headerlink" title="4、声明抽象类，并包含抽象方法。测试类中创建一个继承抽象类的匿名子类的对象"></a>4、声明抽象类，并包含抽象方法。测试类中创建一个继承抽象类的匿名子类的对象</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang2.java;/* * 声明抽象类，并包含抽象方法。 */public abstract class AA &#123;    public abstract void method();&#125;</code></pre><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang2.java;/* * 测试类中创建一个继承抽象类的匿名子类的对象 */public class AATest &#123;    public static void main(String[] args) &#123;        AA a = new AA() &#123;            public void method() &#123;                System.out.println("输出AA");            &#125;        &#125;;        a.method();    &#125;&#125;</code></pre><h3 id="4、如何创建静态成员内部类和非静态成员内部类的对象？"><a href="#4、如何创建静态成员内部类和非静态成员内部类的对象？" class="headerlink" title="4、如何创建静态成员内部类和非静态成员内部类的对象？"></a>4、如何创建静态成员内部类和非静态成员内部类的对象？</h3><pre class=" language-lang-bash"><code class="language-lang-bash">// 创建静态成员内部类的对象Person.Dog  dog = new Person.Dog();</code></pre><pre class=" language-lang-bash"><code class="language-lang-bash">//创建非静态成员内部类的对象Person p = new Person();Person.Bird bird = p.new Bird();</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> java基础学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java每日一考13</title>
       <link href="/2020/10/14/javatest13/"/>
       <url>/2020/10/14/javatest13/</url>
