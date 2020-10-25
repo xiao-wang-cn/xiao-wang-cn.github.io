@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>java每日一考15</title>
+      <link href="/2020/10/25/javatest15/"/>
+      <url>/2020/10/25/javatest15/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、谈谈你对程序、进程、线程的理解"><a href="#1、谈谈你对程序、进程、线程的理解" class="headerlink" title="1、谈谈你对程序、进程、线程的理解"></a>1、谈谈你对程序、进程、线程的理解</h3><p>程序：是为完成特定任务、用某种语言编写的一组指令的集合。</p><p>进程：是程序的一次执行过程，或是正在运行的一个程序。</p><p>线程：是一个程序内部的一条执行路径。</p><h3 id="2、代码完成继承Thread的方式创建分线程，并遍历100以内的自然数"><a href="#2、代码完成继承Thread的方式创建分线程，并遍历100以内的自然数" class="headerlink" title="2、代码完成继承Thread的方式创建分线程，并遍历100以内的自然数"></a>2、代码完成继承Thread的方式创建分线程，并遍历100以内的自然数</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang3.java;/*** @author xiao-wang* @create 2020-10-25 16:58*/class MThread extends Thread&#123;    @Override    public void run() &#123;        for (int i = 0; i < 100; i++) &#123;            System.out.println(i);        &#125;    &#125;&#125;public class ThreadTest &#123;    public static void main(String[] args) &#123;        MThread mThread = new MThread();        mThread.start();    &#125;&#125;</code></pre><h3 id="3、代码完成实现Runnable接口的方法创建分线程，并遍历100以内的自然数"><a href="#3、代码完成实现Runnable接口的方法创建分线程，并遍历100以内的自然数" class="headerlink" title="3、代码完成实现Runnable接口的方法创建分线程，并遍历100以内的自然数"></a>3、代码完成实现Runnable接口的方法创建分线程，并遍历100以内的自然数</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang3.java;/*** @author xiao-wang* @create 2020-10-25 17:04*/class MyThread implements Runnable&#123;    @Override    public void run() &#123;        for (int i = 0; i < 100; i++) &#123;            System.out.println(i);        &#125;    &#125;&#125;public class ThreadTest2 &#123;    public static void main(String[] args) &#123;        MyThread myThread = new MyThread();        Thread t1 = new Thread(myThread);        t1.start();    &#125;&#125;</code></pre><h3 id="4、对比两种创建方式"><a href="#4、对比两种创建方式" class="headerlink" title="4、对比两种创建方式"></a>4、对比两种创建方式</h3><p><strong>区别：</strong></p><p>继承Thread：线程代码存放Thread子类run方法中</p><p>实现Runable：线程代码存放在接口的子类的run方法中</p><p><strong>实现方式好处：</strong></p><p>避免了单继承的局限性</p><p>多个线程可以共享同一个接口实现类的对象，非常适合多个相同线程来处理同一份资源</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java基础学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java每日一考14</title>
       <link href="/2020/10/16/javatest14/"/>
       <url>/2020/10/16/javatest14/</url>
