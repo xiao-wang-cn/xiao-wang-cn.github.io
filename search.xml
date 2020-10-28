@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>java每日一考16</title>
+      <link href="/2020/10/28/javatest16/"/>
+      <url>/2020/10/28/javatest16/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、画图说明线程的生命周期，以及各状态切换使用到的方法等"><a href="#1、画图说明线程的生命周期，以及各状态切换使用到的方法等" class="headerlink" title="1、画图说明线程的生命周期，以及各状态切换使用到的方法等"></a>1、画图说明线程的生命周期，以及各状态切换使用到的方法等</h3><p><img src="生命周期.png" alt=""></p><h3 id="2、同步代码块中涉及到同步监视器和共享数据，谈谈你对同步监视器和共享数据的理解，以及注意点。"><a href="#2、同步代码块中涉及到同步监视器和共享数据，谈谈你对同步监视器和共享数据的理解，以及注意点。" class="headerlink" title="2、同步代码块中涉及到同步监视器和共享数据，谈谈你对同步监视器和共享数据的理解，以及注意点。"></a>2、同步代码块中涉及到同步监视器和共享数据，谈谈你对同步监视器和共享数据的理解，以及注意点。</h3><p><strong>同步监视器：</strong></p><p>任意对象都可以作为同步锁。所有对象都自动含有单一的锁（监视器）</p><p>同步方法的锁：静态方法（类名.class）、非静态方法（this）</p><p>同步代码块：自己指定，很多时候也是指定为this或类名.class</p><p><strong>共享数据：</strong></p><p>多个线程共同操作的数据，即为共享数据。需要使用同步机制将操作共享数据的代码包起来，不能包多了，也不能包少了。</p><p><strong>注意：</strong></p><p>必须保证使用同一个资源的多个线程共用一把锁，这个非常重要，否则无法保证共享资源的安全。</p><p>一个线程类中的所有静态方法共用一把锁（类名.class）,所有非静态方法共用一把锁（this）,同步代码块（指定需谨慎）</p><h3 id="3、sleep-和wait-区别"><a href="#3、sleep-和wait-区别" class="headerlink" title="3、sleep()和wait()区别"></a>3、sleep()和wait()区别</h3><p>①sleep()来自Thread类，wait()来自Object类</p><p>②sleep()没有释放锁，wait()释放了锁</p><p>③wait、notify和notifyAll只能在同步控制方法或者同步控制块里面使用，而sleep()可以在任何地方使用</p><p>④sleep()必须捕获异常，而wait,notify和notifyAll不需要捕获异常</p><h3 id="4、写一个线程安全的懒汉式"><a href="#4、写一个线程安全的懒汉式" class="headerlink" title="4、写一个线程安全的懒汉式"></a>4、写一个线程安全的懒汉式</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java2;/*** @author xiao-wang* @create 2020-10-28 16:23*/class Bank&#123;    private static Bank instance = null;    public Bank() &#123;    &#125;    public static Bank getBank()&#123;        if(instance == null)&#123;            synchronized (Bank.class) &#123;                if(instance == null)&#123;                    instance = new Bank();                &#125;            &#125;        &#125;        return instance;    &#125;&#125;public class BankTest &#123;    public static void main(String[] args) &#123;        Bank b1 = Bank.getBank();        Bank b2 = Bank.getBank();        System.out.println(b1 == b2);    &#125;&#125;</code></pre><h3 id="5、创建多线程有哪几种方式？"><a href="#5、创建多线程有哪几种方式？" class="headerlink" title="5、创建多线程有哪几种方式？"></a>5、创建多线程有哪几种方式？</h3><p>继承Thread类</p><p>实现Runnable类</p><p>实现Callable接口</p><p>线程池</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java基础学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java每日一考15</title>
       <link href="/2020/10/25/javatest15/"/>
       <url>/2020/10/25/javatest15/</url>
