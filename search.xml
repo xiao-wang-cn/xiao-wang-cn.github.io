@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>java每日一考17</title>
+      <link href="/2020/10/30/javatest17/"/>
+      <url>/2020/10/30/javatest17/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、如何理解String类的不可变性？"><a href="#1、如何理解String类的不可变性？" class="headerlink" title="1、如何理解String类的不可变性？"></a>1、如何理解String类的不可变性？</h3><p>String是一个final类，代表不可变的字符序列</p><p>字符串是常量，用双引号引起来表示，它们的值在创建之后不能更改</p><p>String对象的字符内容是存储在一个字符数组value[]中的</p><h3 id="2、String类是否可以被继承？为什么？"><a href="#2、String类是否可以被继承？为什么？" class="headerlink" title="2、String类是否可以被继承？为什么？"></a>2、String类是否可以被继承？为什么？</h3><p>String类是一个final类，不可以被继承</p><h3 id="3、String，StringBuffer，StringBuilder三者的对比"><a href="#3、String，StringBuffer，StringBuilder三者的对比" class="headerlink" title="3、String，StringBuffer，StringBuilder三者的对比"></a>3、String，StringBuffer，StringBuilder三者的对比</h3><p>String：不可变字符序列</p><p>StringBuffer：可变字符序列、效率低、线程安全</p><p>StringBuilder:可变字符序列、效率高、线程不安全</p><h3 id="4、String的常用方法有哪些？"><a href="#4、String的常用方法有哪些？" class="headerlink" title="4、String的常用方法有哪些？"></a>4、String的常用方法有哪些？</h3><p>length()/charAt()/equals()/compareTo()/startsWith()/endsWith()/contains()<br>/indexOf()/lastIndexOf()/getBytes()/toCharArray()/valueOf()</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java基础学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java每日一考16</title>
       <link href="/2020/10/28/javatest16/"/>
       <url>/2020/10/28/javatest16/</url>
