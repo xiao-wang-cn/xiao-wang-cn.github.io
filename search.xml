@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>java每日一考18</title>
+      <link href="/2020/11/01/javatest18/"/>
+      <url>/2020/11/01/javatest18/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、将字符串”2017-08-16”转换为对应的java-sql-Date类的对象"><a href="#1、将字符串”2017-08-16”转换为对应的java-sql-Date类的对象" class="headerlink" title="1、将字符串”2017-08-16”转换为对应的java.sql.Date类的对象"></a>1、将字符串”2017-08-16”转换为对应的java.sql.Date类的对象</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java2;import java.text.ParseException;import java.text.SimpleDateFormat;import java.util.Date;import java.util.logging.SimpleFormatter;/*** @author xiao-wang* @create 2020-11-01 14:55* 将"2017-08-16"转换为对应的java.sql.Date类的对象。*/public class CastDate &#123;    public static void main(String[] args) throws ParseException &#123;        String str1 = "2017-08-16";        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");        Date date1 = sdf.parse(str1);        java.sql.Date date2 = new java.sql.Date(date1.getTime());        System.out.println(date2);    &#125;&#125;</code></pre><h3 id="2、解释何为编码？解码？-何为日期时间的格式化？解析？"><a href="#2、解释何为编码？解码？-何为日期时间的格式化？解析？" class="headerlink" title="2、解释何为编码？解码？ 何为日期时间的格式化？解析？"></a>2、解释何为编码？解码？ 何为日期时间的格式化？解析？</h3><p>编码：字符串-&gt;字节</p><p>解码：字节-&gt;字符串</p><p>格式化：日期-&gt;字符串</p><p>解析：字符串-&gt;日期</p><h3 id="3、自定义Person类如下，如何实现自然排序（按姓名从小到大排序），代码说明"><a href="#3、自定义Person类如下，如何实现自然排序（按姓名从小到大排序），代码说明" class="headerlink" title="3、自定义Person类如下，如何实现自然排序（按姓名从小到大排序），代码说明"></a>3、自定义Person类如下，如何实现自然排序（按姓名从小到大排序），代码说明</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java2;import java.util.Arrays;/*** @author xiao-wang* @create 2020-11-01 15:31* 按姓名从小到大排序*/class Person implements Comparable &#123;    private String name;    private int age;    public Person() &#123;    &#125;    public Person(String name, int age) &#123;        this.name = name;        this.age = age;    &#125;    public String getName() &#123;        return name;    &#125;    public void setName(String name) &#123;        this.name = name;    &#125;    public int getAge() &#123;        return age;    &#125;    public void setAge(int age) &#123;        this.age = age;    &#125;    @Override    public int compareTo(Object o) &#123;        if(o instanceof Person)&#123;            Person p1 = (Person) o;            return this.getName().compareTo(p1.getName());        &#125;        throw new RuntimeException("传入数据类型错误");    &#125;    @Override    public String toString() &#123;        return "Person&#123;" +                "name='" + name + '\'' +                ", age=" + age +                '&#125;';    &#125;&#125;public class CompareName &#123;    public static void main(String[] args) &#123;        Person[] p = new Person[5];        p[0] = new Person("xiao",23);        p[1] = new Person("zhang",15);        p[2] = new Person("tian",21);        p[3] = new Person("li",23);        p[4] = new Person("wang",18);        Arrays.sort(p);        System.out.println(Arrays.toString(p));    &#125;&#125;</code></pre><h3 id="4、提供定制排序涉及到的接口的实现类对象，并按Person类的年龄从大到小排序"><a href="#4、提供定制排序涉及到的接口的实现类对象，并按Person类的年龄从大到小排序" class="headerlink" title="4、提供定制排序涉及到的接口的实现类对象，并按Person类的年龄从大到小排序"></a>4、提供定制排序涉及到的接口的实现类对象，并按Person类的年龄从大到小排序</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java2;import java.util.Arrays;import java.util.Comparator;/*** @author xiao-wang* @create 2020-11-01 15:46* 提供定制排序涉及到的接口的实现类对象，并按Person类的年龄从大到小排序*/public class CompareAge &#123;    public static void main(String[] args) &#123;        Person[] p = new Person[5];        p[0] = new Person("xiao",23);        p[1] = new Person("zhang",15);        p[2] = new Person("tian",21);        p[3] = new Person("li",23);        p[4] = new Person("wang",18);        Arrays.sort(p, new Comparator()&#123;            @Override            public int compare(Object o1, Object o2) &#123;                if(o1 instanceof Person && o2 instanceof Person)&#123;                    Person p1 = (Person) o1;                    Person p2 = (Person) o2;                    return -Double.compare(p1.getAge(),p2.getAge());                &#125;                throw new RuntimeException("传入数据类型错误");            &#125;        &#125;);        System.out.println(Arrays.toString(p));    &#125;&#125;</code></pre><h3 id="5、JDK-8之前和JDK8中日期、时间相关的类分别有哪些？"><a href="#5、JDK-8之前和JDK8中日期、时间相关的类分别有哪些？" class="headerlink" title="5、JDK 8之前和JDK8中日期、时间相关的类分别有哪些？"></a>5、JDK 8之前和JDK8中日期、时间相关的类分别有哪些？</h3><p>java.util.Date 和 java.sql.Date—&gt; Instant</p><p>SimpleDateFormat—&gt;DateTimeFormatter</p><p>Calendar —&gt;LocalDate、LocalTime、LocalDateTime</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java基础学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java每日一考17</title>
       <link href="/2020/10/30/javatest17/"/>
       <url>/2020/10/30/javatest17/</url>
