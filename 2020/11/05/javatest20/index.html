@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="java每日一考19, HTML, CSS, JavaScript, JQuery, React, Vue.js等">
+    <meta name="keywords" content="java每日一考20, HTML, CSS, JavaScript, JQuery, React, Vue.js等">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>java每日一考19 | xiao-wang</title>
+    <title>java每日一考20 | xiao-wang</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">java每日一考19</h1>
+                    <h1 class="description center-align post-title">java每日一考20</h1>
                 </div>
             </div>
         </div>
@@ -459,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-03
+                    2020-11-05
                 </div>
                 
 
@@ -485,22 +485,33 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1、什么是枚举类？枚举类的对象声明的修饰符都有哪些？"><a href="#1、什么是枚举类？枚举类的对象声明的修饰符都有哪些？" class="headerlink" title="1、什么是枚举类？枚举类的对象声明的修饰符都有哪些？"></a>1、什么是枚举类？枚举类的对象声明的修饰符都有哪些？</h3><p>枚举类：类中的对象个数是确定的，有限的</p>
-<p>修饰符：private static final</p>
-<h3 id="2、什么是元注解？说说Retention和Target元注解的作用"><a href="#2、什么是元注解？说说Retention和Target元注解的作用" class="headerlink" title="2、什么是元注解？说说Retention和Target元注解的作用"></a>2、什么是元注解？说说Retention和Target元注解的作用</h3><p>元注解：对现有注解进行解释说明的注解</p>
-<p>Retention:指明所修饰注解的生命周期</p>
-<p>Target:指明所修饰注解能修饰的程序元素类型</p>
-<h3 id="3、说说你所理解的集合框架都有哪些接口，存储数据的特点是什么？"><a href="#3、说说你所理解的集合框架都有哪些接口，存储数据的特点是什么？" class="headerlink" title="3、说说你所理解的集合框架都有哪些接口，存储数据的特点是什么？"></a>3、说说你所理解的集合框架都有哪些接口，存储数据的特点是什么？</h3><p>（1）Collection接口：单列集合，用来存储一个一个的对象</p>
-<p>①List接口：存储有序的、可重复的数据</p>
-<p>②Set接口：存储无序的、不可重复的数据</p>
-<p>（2）Map接口：双列集合，用来存储一对（key - value）一对的数据</p>
-<h3 id="4、比较throw和throws的不同："><a href="#4、比较throw和throws的不同：" class="headerlink" title="4、比较throw和throws的不同："></a>4、比较throw和throws的不同：</h3><p>throw:生成一个异常对象，并抛出，使用在方法体内部&lt;——&gt;自动抛出异常对象</p>
-<p>throws：处理异常的方式，使用在方法声明处的结尾处&lt;——&gt;try-catch-finally</p>
-<h3 id="5、谈谈你对同步代码块中同步监视器和共享数据的理解及各自要求"><a href="#5、谈谈你对同步代码块中同步监视器和共享数据的理解及各自要求" class="headerlink" title="5、谈谈你对同步代码块中同步监视器和共享数据的理解及各自要求"></a>5、谈谈你对同步代码块中同步监视器和共享数据的理解及各自要求</h3><p>同步监视器：俗称锁，</p>
-<p>任何一个类的对象都能充当锁</p>
-<p>多个线程共用一把锁</p>
-<p>共享数据:多个线程共同操作的数据，即为共享数据</p>
-<p>需要使用同步机制将操作共享数据的代码包起来，不能包少了，也不能包多了</p>
+                <h3 id="1、集合Collection中存储的如果是自定义的类的对象，需要自定义类重写哪个方法？"><a href="#1、集合Collection中存储的如果是自定义的类的对象，需要自定义类重写哪个方法？" class="headerlink" title="1、集合Collection中存储的如果是自定义的类的对象，需要自定义类重写哪个方法？"></a>1、集合Collection中存储的如果是自定义的类的对象，需要自定义类重写哪个方法？</h3><p>一定需要重写equals()方法</p>
+<p>①List接口时：</p>
+<p>重写equals()方法</p>
+<p>②Set接口时：</p>
+<p>（HashSet、LinkedHashSet）:</p>
+<p>重写equals()和hashcode()</p>
+<p>(TreeSet):</p>
+<p>自然排序 Compareable: CompareTo(Object obj)</p>
+<p>定制排序 Comparator: Compare(Object o1,Object o2)</p>
+<h3 id="2、ArrayList-LinkedList-Vector三者相同点与不同点？"><a href="#2、ArrayList-LinkedList-Vector三者相同点与不同点？" class="headerlink" title="2、ArrayList,LinkedList,Vector三者相同点与不同点？"></a>2、ArrayList,LinkedList,Vector三者相同点与不同点？</h3><p>相同点：</p>
+<p>都实现了List接口，存储数据都是有序，可重复的</p>
+<p>不同点：</p>
+<p>ArrayList与Vector:<br>ArrayList是新的List实现类，线程不安全，效率高,底层用数组实现的,扩容时是原来的1.5倍。Vector是古老的List实现类，线程安全，效率较低，底层用数组实现的，扩容时是原来的2倍</p>
+<p>ArrayList与LinkedList:ArrayList：ArrayList底层用数组存储。LinkedList底层用双向链表存储</p>
+<h3 id="3、List接口的常用方法有哪些？（增、删、改、查、插、长度、遍历）"><a href="#3、List接口的常用方法有哪些？（增、删、改、查、插、长度、遍历）" class="headerlink" title="3、List接口的常用方法有哪些？（增、删、改、查、插、长度、遍历）"></a>3、List接口的常用方法有哪些？（增、删、改、查、插、长度、遍历）</h3><pre class=" language-lang-bash"><code class="language-lang-bash">add(Object obj)
+remove(Object obj)\remove(int index)
+set(int index,Object obj)
+get(int index)
+add(int index,Object obj)
+size()
+使用Iterator、foreach
+</code></pre>
+<h3 id="4、Set存储数据的特点是什么？常见的实现类有什么？说明一下彼此的特点？"><a href="#4、Set存储数据的特点是什么？常见的实现类有什么？说明一下彼此的特点？" class="headerlink" title="4、Set存储数据的特点是什么？常见的实现类有什么？说明一下彼此的特点？"></a>4、Set存储数据的特点是什么？常见的实现类有什么？说明一下彼此的特点？</h3><p>特点：无序的、不可重复的</p>
+<p>常见实现类：HashSet()、LinkedHashSet()、TreeSet()</p>
+<p>HashSet():添加到HashSet的元素需要重写equals方法和hashcode方法</p>
+<p>LinkedHashSet():是HashSet的子类，每个数据节点维护两个引用，指示前一个节点和后一个节点</p>
+<p>TreeSet:底层用红黑树实现，插入的对象必须是同类对象，会使集合元素处于排序状态</p>
 
             </div>
             <hr/>
@@ -526,7 +537,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xiao-wang-cn.github.io/2020/11/03/javatest19/">https://xiao-wang-cn.github.io/2020/11/03/javatest19/</a>
+                    <a href="https://xiao-wang-cn.github.io/2020/11/05/javatest20/">https://xiao-wang-cn.github.io/2020/11/05/javatest20/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -996,9 +1007,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/11/05/javatest20/">
                     <div class="card-image">
@@ -1021,9 +1033,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-05
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-05
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1036,6 +1048,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1054,27 +1067,26 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/01/javatest18/">
+                <a href="/2020/11/03/javatest19/">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/22.jpg" class="responsive-img" alt="java每日一考18">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/21.jpg" class="responsive-img" alt="java每日一考19">
                         
-                        <span class="card-title">java每日一考18</span>
+                        <span class="card-title">java每日一考19</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1、将字符串”2017-08-16”转换为对应的java.sql.Date类的对象package xiao.wang.java2;
-
-import java.text.ParseException;
-import java.text.Sim
+                            1、什么是枚举类？枚举类的对象声明的修饰符都有哪些？枚举类：类中的对象个数是确定的，有限的
+修饰符：private static final
+2、什么是元注解？说说Retention和Target元注解的作用元注解：对现有注解进行解释说明的
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-01
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-03
                             </span>
                         <span class="publish-author">
                             
