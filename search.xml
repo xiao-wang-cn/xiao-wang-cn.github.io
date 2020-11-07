@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>java每日一考21</title>
+      <link href="/2020/11/07/javatest21/"/>
+      <url>/2020/11/07/javatest21/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、Map存储数据的特点是什么？并指明key、value、entry存储数据的特点"><a href="#1、Map存储数据的特点是什么？并指明key、value、entry存储数据的特点" class="headerlink" title="1、Map存储数据的特点是什么？并指明key、value、entry存储数据的特点"></a>1、Map存储数据的特点是什么？并指明key、value、entry存储数据的特点</h3><p>Map存储双列数据，存储key-value对数据</p><p>key:无序的、不可重复的——&gt;Set存储</p><p>value：无序的、可重复的——-&gt;Collection存储</p><p>entry:无序的、不可重复的——-&gt;Set存储</p><h3 id="2、-描述HashMap的底层实现原理（jdk8版）"><a href="#2、-描述HashMap的底层实现原理（jdk8版）" class="headerlink" title="2、 描述HashMap的底层实现原理（jdk8版）"></a>2、 描述HashMap的底层实现原理（jdk8版）</h3><p>HashMap在底层数据结构上采用了数组+链表+红黑树，通过散列映射来存储键值对数据，因为在查询上使用散列码（通过键生成一个数字作为数组下标，这个数字就是hashcode）访问速度比较快，HashMap最多允许一对键值对的key为Null,允许多对键值对的value为Null。它是非线程安全的，在排序上是无序的。</p><p>transient Node<K,V>[] table: 这是一个Node类型的数组，Node可以看作是一个节点，多个Node节点多个链表，链表长度大于8时，转换成红黑树。</p><p>put（K key,V value）: 在使用默认构造器初始化一个HashMap对象的时候，首先Put键值对的时候会先计算对应Key的Hash值，通过Hash值来确定存放的地址。</p><p>紧接着调用了putVal方法，在刚刚初始化之后的table值为null。因此程序会进入到resize（）方法中。resize（）方法就是用来扩容的。扩容后得到一个table的节点（Node）数组，接着根据传入的hash值去获得一个对应节点p并去判断是否为空，是的话就存入一个新的节点（Node）,反之，如果之前存放的位置已经有值了就会进入else中。接着根据前面得到的节点p的hash值以及key跟传入的hash值以及参数进行比较，如果一样则覆盖。如果存在hash碰撞就会以链表形式保存，把当前传进来的参数生成一个新的节点保存在链表的尾部，而如果链表程度大于8就会以红黑树的形式进行保存。</p><p>HashMap初始化后首次插入数据时，先发生resize（）扩容在插入数据，之后每当插入的数据个数达到threshold时就会发生resize，此时是先插入数据在resize.</p><h3 id="3、Map中常用实现类有哪些？各自有什么特点？"><a href="#3、Map中常用实现类有哪些？各自有什么特点？" class="headerlink" title="3、Map中常用实现类有哪些？各自有什么特点？"></a>3、Map中常用实现类有哪些？各自有什么特点？</h3><p><strong>HashMap:</strong>作为Map的主要实现类：线程不安全的，效率高，存储null的key和value</p><p>&ensp;&ensp; <strong>LinkedHashMap:</strong>在保证遍历map元素时，可以按照添加的顺序实现遍历<br><strong>TreeMap：</strong>保证按照添加的key-value对进行排序，实现遍历排序。此时考虑key的自然排序或定制排序。底层使用红黑树</p><p><strong>Hashtable:</strong>作为古老的实现类，线程安全的，效率低，不能存储null的key和value</p><p>&ensp;&ensp; <strong>properties:</strong>常用来处理配置文件。key和value都是String类型。</p><h3 id="4、如何遍历Map中key-value对，代码实现"><a href="#4、如何遍历Map中key-value对，代码实现" class="headerlink" title="4、如何遍历Map中key-value对，代码实现"></a>4、如何遍历Map中key-value对，代码实现</h3><pre class=" language-lang-bash"><code class="language-lang-bash">方式一：package xiao.wang.java4;import java.util.HashMap;import java.util.Iterator;import java.util.Set;/*** @author xiao-wang* @create 2020-11-07 15:47*/public class MapTest &#123;    public static void main(String[] args) &#123;        HashMap map = new HashMap();        map.put("AA",12);        map.put("BB",24);        map.put("CC",false);        map.put("FF","小王");        //遍历方式一：        Set set = map.entrySet();        Iterator iterator = set.iterator();        while(iterator.hasNext())&#123;            System.out.println(iterator.next());        &#125;    &#125;&#125;</code></pre><pre class=" language-lang-bash"><code class="language-lang-bash">方式二：package xiao.wang.java4;import java.util.Collection;import java.util.HashMap;import java.util.Iterator;import java.util.Set;/*** @author xiao-wang* @create 2020-11-07 15:51*/public class MapTest2 &#123;    public static void main(String[] args) &#123;        HashMap map = new HashMap();        map.put("AA",12);        map.put("BB",24);        map.put("CC",false);        map.put("FF","小王");        //遍历方式二：        Set set = map.keySet();        Iterator iterator = set.iterator();        while(iterator.hasNext())&#123;            Object o = iterator.next();            Object o1 = map.get(o);            System.out.println(o + "---->" + o1);        &#125;    &#125;&#125;</code></pre><h3 id="5、Collection和Collections区别："><a href="#5、Collection和Collections区别：" class="headerlink" title="5、Collection和Collections区别："></a>5、Collection和Collections区别：</h3><p>Collection:单列集合的接口，有子接口List和Set</p><p>Collections:是针对Collection和Map操作的工具类，</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java基础学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java集合中Map接口 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java每日一考20</title>
       <link href="/2020/11/05/javatest20/"/>
       <url>/2020/11/05/javatest20/</url>

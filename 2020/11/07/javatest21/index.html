@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="java每日一考18, HTML, CSS, JavaScript, JQuery, React, Vue.js等">
+    <meta name="keywords" content="java每日一考21, HTML, CSS, JavaScript, JQuery, React, Vue.js等">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>java每日一考18 | xiao-wang</title>
+    <title>java每日一考21 | xiao-wang</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -317,7 +317,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">java每日一考18</h1>
+                    <h1 class="description center-align post-title">java每日一考21</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java%E5%B8%B8%E7%94%A8%E7%B1%BB%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/">
-                                <span class="chip bg-color">java常用类日期和时间</span>
+                            <a href="/tags/java%E9%9B%86%E5%90%88%E4%B8%ADMap%E6%8E%A5%E5%8F%A3/">
+                                <span class="chip bg-color">java集合中Map接口</span>
                             </a>
                         
                     </div>
@@ -459,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-01
+                    2020-11-07
                 </div>
                 
 
@@ -468,7 +468,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    618
+                    948
                 </div>
                 
 
@@ -485,136 +485,76 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1、将字符串”2017-08-16”转换为对应的java-sql-Date类的对象"><a href="#1、将字符串”2017-08-16”转换为对应的java-sql-Date类的对象" class="headerlink" title="1、将字符串”2017-08-16”转换为对应的java.sql.Date类的对象"></a>1、将字符串”2017-08-16”转换为对应的java.sql.Date类的对象</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java2;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.logging.SimpleFormatter;
-
-/**
-* @author xiao-wang
-* @create 2020-11-01 14:55
-* 将"2017-08-16"转换为对应的java.sql.Date类的对象。
-*/
-public class CastDate &#123;
-    public static void main(String[] args) throws ParseException &#123;
-        String str1 = "2017-08-16";
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        Date date1 = sdf.parse(str1);
-        java.sql.Date date2 = new java.sql.Date(date1.getTime());
-        System.out.println(date2);
-    &#125;
-&#125;
-</code></pre>
-<h3 id="2、解释何为编码？解码？-何为日期时间的格式化？解析？"><a href="#2、解释何为编码？解码？-何为日期时间的格式化？解析？" class="headerlink" title="2、解释何为编码？解码？ 何为日期时间的格式化？解析？"></a>2、解释何为编码？解码？ 何为日期时间的格式化？解析？</h3><p>编码：字符串-&gt;字节</p>
-<p>解码：字节-&gt;字符串</p>
-<p>格式化：日期-&gt;字符串</p>
-<p>解析：字符串-&gt;日期</p>
-<h3 id="3、自定义Person类如下，如何实现自然排序（按姓名从小到大排序），代码说明"><a href="#3、自定义Person类如下，如何实现自然排序（按姓名从小到大排序），代码说明" class="headerlink" title="3、自定义Person类如下，如何实现自然排序（按姓名从小到大排序），代码说明"></a>3、自定义Person类如下，如何实现自然排序（按姓名从小到大排序），代码说明</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java2;
-
-import java.util.Arrays;
+                <h3 id="1、Map存储数据的特点是什么？并指明key、value、entry存储数据的特点"><a href="#1、Map存储数据的特点是什么？并指明key、value、entry存储数据的特点" class="headerlink" title="1、Map存储数据的特点是什么？并指明key、value、entry存储数据的特点"></a>1、Map存储数据的特点是什么？并指明key、value、entry存储数据的特点</h3><p>Map存储双列数据，存储key-value对数据</p>
+<p>key:无序的、不可重复的——&gt;Set存储</p>
+<p>value：无序的、可重复的——-&gt;Collection存储</p>
+<p>entry:无序的、不可重复的——-&gt;Set存储</p>
+<h3 id="2、-描述HashMap的底层实现原理（jdk8版）"><a href="#2、-描述HashMap的底层实现原理（jdk8版）" class="headerlink" title="2、 描述HashMap的底层实现原理（jdk8版）"></a>2、 描述HashMap的底层实现原理（jdk8版）</h3><p>HashMap在底层数据结构上采用了数组+链表+红黑树，通过散列映射来存储键值对数据，因为在查询上使用散列码（通过键生成一个数字作为数组下标，这个数字就是hashcode）访问速度比较快，HashMap最多允许一对键值对的key为Null,允许多对键值对的value为Null。它是非线程安全的，在排序上是无序的。</p>
+<p>transient Node<K,V>[] table: 这是一个Node类型的数组，Node可以看作是一个节点，多个Node节点多个链表，链表长度大于8时，转换成红黑树。</p>
+<p>put（K key,V value）: 在使用默认构造器初始化一个HashMap对象的时候，首先Put键值对的时候会先计算对应Key的Hash值，通过Hash值来确定存放的地址。</p>
+<p>紧接着调用了putVal方法，在刚刚初始化之后的table值为null。因此程序会进入到resize（）方法中。resize（）方法就是用来扩容的。扩容后得到一个table的节点（Node）数组，接着根据传入的hash值去获得一个对应节点p并去判断是否为空，是的话就存入一个新的节点（Node）,反之，如果之前存放的位置已经有值了就会进入else中。接着根据前面得到的节点p的hash值以及key跟传入的hash值以及参数进行比较，如果一样则覆盖。如果存在hash碰撞就会以链表形式保存，把当前传进来的参数生成一个新的节点保存在链表的尾部，而如果链表程度大于8就会以红黑树的形式进行保存。</p>
+<p>HashMap初始化后首次插入数据时，先发生resize（）扩容在插入数据，之后每当插入的数据个数达到threshold时就会发生resize，此时是先插入数据在resize.</p>
+<h3 id="3、Map中常用实现类有哪些？各自有什么特点？"><a href="#3、Map中常用实现类有哪些？各自有什么特点？" class="headerlink" title="3、Map中常用实现类有哪些？各自有什么特点？"></a>3、Map中常用实现类有哪些？各自有什么特点？</h3><p><strong>HashMap:</strong>作为Map的主要实现类：线程不安全的，效率高，存储null的key和value</p>
+<p>&ensp;&ensp; <strong>LinkedHashMap:</strong>在保证遍历map元素时，可以按照添加的顺序实现遍历<br><strong>TreeMap：</strong>保证按照添加的key-value对进行排序，实现遍历排序。此时考虑key的自然排序或定制排序。底层使用红黑树</p>
+<p><strong>Hashtable:</strong>作为古老的实现类，线程安全的，效率低，不能存储null的key和value</p>
+<p>&ensp;&ensp; <strong>properties:</strong>常用来处理配置文件。key和value都是String类型。</p>
+<h3 id="4、如何遍历Map中key-value对，代码实现"><a href="#4、如何遍历Map中key-value对，代码实现" class="headerlink" title="4、如何遍历Map中key-value对，代码实现"></a>4、如何遍历Map中key-value对，代码实现</h3><pre class=" language-lang-bash"><code class="language-lang-bash">方式一：
+package xiao.wang.java4;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
 * @author xiao-wang
-* @create 2020-11-01 15:31
-* 按姓名从小到大排序
+* @create 2020-11-07 15:47
 */
-class Person implements Comparable &#123;
-    private String name;
-    private int age;
-
-    public Person() &#123;
-    &#125;
-
-    public Person(String name, int age) &#123;
-        this.name = name;
-        this.age = age;
-    &#125;
-
-    public String getName() &#123;
-        return name;
-    &#125;
-
-    public void setName(String name) &#123;
-        this.name = name;
-    &#125;
-
-    public int getAge() &#123;
-        return age;
-    &#125;
-
-    public void setAge(int age) &#123;
-        this.age = age;
-    &#125;
-
-    @Override
-    public int compareTo(Object o) &#123;
-        if(o instanceof Person)&#123;
-            Person p1 = (Person) o;
-            return this.getName().compareTo(p1.getName());
+public class MapTest &#123;
+    public static void main(String[] args) &#123;
+        HashMap map = new HashMap();
+        map.put("AA",12);
+        map.put("BB",24);
+        map.put("CC",false);
+        map.put("FF","小王");
+        //遍历方式一：
+        Set set = map.entrySet();
+        Iterator iterator = set.iterator();
+        while(iterator.hasNext())&#123;
+            System.out.println(iterator.next());
         &#125;
-        throw new RuntimeException("传入数据类型错误");
-    &#125;
-
-    @Override
-    public String toString() &#123;
-        return "Person&#123;" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                '&#125;';
-    &#125;
-&#125;
-public class CompareName &#123;
-    public static void main(String[] args) &#123;
-        Person[] p = new Person[5];
-        p[0] = new Person("xiao",23);
-        p[1] = new Person("zhang",15);
-        p[2] = new Person("tian",21);
-        p[3] = new Person("li",23);
-        p[4] = new Person("wang",18);
-        Arrays.sort(p);
-        System.out.println(Arrays.toString(p));
     &#125;
 &#125;
 </code></pre>
-<h3 id="4、提供定制排序涉及到的接口的实现类对象，并按Person类的年龄从大到小排序"><a href="#4、提供定制排序涉及到的接口的实现类对象，并按Person类的年龄从大到小排序" class="headerlink" title="4、提供定制排序涉及到的接口的实现类对象，并按Person类的年龄从大到小排序"></a>4、提供定制排序涉及到的接口的实现类对象，并按Person类的年龄从大到小排序</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java2;
-
-import java.util.Arrays;
-import java.util.Comparator;
+<pre class=" language-lang-bash"><code class="language-lang-bash">方式二：
+package xiao.wang.java4;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
 * @author xiao-wang
-* @create 2020-11-01 15:46
-* 提供定制排序涉及到的接口的实现类对象，并按Person类的年龄从大到小排序
+* @create 2020-11-07 15:51
 */
-public class CompareAge &#123;
+public class MapTest2 &#123;
     public static void main(String[] args) &#123;
-        Person[] p = new Person[5];
-        p[0] = new Person("xiao",23);
-        p[1] = new Person("zhang",15);
-        p[2] = new Person("tian",21);
-        p[3] = new Person("li",23);
-        p[4] = new Person("wang",18);
-        Arrays.sort(p, new Comparator()&#123;
-
-            @Override
-            public int compare(Object o1, Object o2) &#123;
-                if(o1 instanceof Person && o2 instanceof Person)&#123;
-                    Person p1 = (Person) o1;
-                    Person p2 = (Person) o2;
-                    return -Double.compare(p1.getAge(),p2.getAge());
-                &#125;
-                throw new RuntimeException("传入数据类型错误");
-            &#125;
-        &#125;);
-        System.out.println(Arrays.toString(p));
+        HashMap map = new HashMap();
+        map.put("AA",12);
+        map.put("BB",24);
+        map.put("CC",false);
+        map.put("FF","小王");
+        //遍历方式二：
+        Set set = map.keySet();
+        Iterator iterator = set.iterator();
+        while(iterator.hasNext())&#123;
+            Object o = iterator.next();
+            Object o1 = map.get(o);
+            System.out.println(o + "---->" + o1);
+        &#125;
     &#125;
 &#125;
 </code></pre>
-<h3 id="5、JDK-8之前和JDK8中日期、时间相关的类分别有哪些？"><a href="#5、JDK-8之前和JDK8中日期、时间相关的类分别有哪些？" class="headerlink" title="5、JDK 8之前和JDK8中日期、时间相关的类分别有哪些？"></a>5、JDK 8之前和JDK8中日期、时间相关的类分别有哪些？</h3><p>java.util.Date 和 java.sql.Date—&gt; Instant</p>
-<p>SimpleDateFormat—&gt;DateTimeFormatter</p>
-<p>Calendar —&gt;LocalDate、LocalTime、LocalDateTime</p>
+<h3 id="5、Collection和Collections区别："><a href="#5、Collection和Collections区别：" class="headerlink" title="5、Collection和Collections区别："></a>5、Collection和Collections区别：</h3><p>Collection:单列集合的接口，有子接口List和Set</p>
+<p>Collections:是针对Collection和Map操作的工具类，</p>
 
             </div>
             <hr/>
@@ -640,7 +580,7 @@ public class CompareAge &#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xiao-wang-cn.github.io/2020/11/01/javatest18/">https://xiao-wang-cn.github.io/2020/11/01/javatest18/</a>
+                    <a href="https://xiao-wang-cn.github.io/2020/11/07/javatest21/">https://xiao-wang-cn.github.io/2020/11/07/javatest21/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -678,8 +618,8 @@ public class CompareAge &#123;
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/java%E5%B8%B8%E7%94%A8%E7%B1%BB%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/">
-                                    <span class="chip bg-color">java常用类日期和时间</span>
+                                <a href="/tags/java%E9%9B%86%E5%90%88%E4%B8%ADMap%E6%8E%A5%E5%8F%A3/">
+                                    <span class="chip bg-color">java集合中Map接口</span>
                                 </a>
                             
                         </div>
@@ -1110,31 +1050,32 @@ public class CompareAge &#123;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/11/03/javatest19/">
+                <a href="/2020/11/07/javatest21/">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/21.jpg" class="responsive-img" alt="java每日一考19">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/22.jpg" class="responsive-img" alt="java每日一考21">
                         
-                        <span class="card-title">java每日一考19</span>
+                        <span class="card-title">java每日一考21</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1、什么是枚举类？枚举类的对象声明的修饰符都有哪些？枚举类：类中的对象个数是确定的，有限的
-修饰符：private static final
-2、什么是元注解？说说Retention和Target元注解的作用元注解：对现有注解进行解释说明的
+                            1、Map存储数据的特点是什么？并指明key、value、entry存储数据的特点Map存储双列数据，存储key-value对数据
+key:无序的、不可重复的——&gt;Set存储
+value：无序的、可重复的——-&gt;Collecti
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1147,11 +1088,12 @@ public class CompareAge &#123;
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java%E6%9E%9A%E4%B8%BE%E7%B1%BB%E5%92%8C%E6%B3%A8%E8%A7%A3/">
-                        <span class="chip bg-color">java枚举类和注解</span>
+                    <a href="/tags/java%E9%9B%86%E5%90%88%E4%B8%ADMap%E6%8E%A5%E5%8F%A3/">
+                        <span class="chip bg-color">java集合中Map接口</span>
                     </a>
                     
                 </div>
@@ -1165,27 +1107,29 @@ public class CompareAge &#123;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/10/30/javatest17/">
+                <a href="/2020/11/05/javatest20/">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/23.jpg" class="responsive-img" alt="java每日一考17">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/23.jpg" class="responsive-img" alt="java每日一考20">
                         
-                        <span class="card-title">java每日一考17</span>
+                        <span class="card-title">java每日一考20</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1、如何理解String类的不可变性？String是一个final类，代表不可变的字符序列
-字符串是常量，用双引号引起来表示，它们的值在创建之后不能更改
-String对象的字符内容是存储在一个字符数组value[]中的
-2、String类是
+                            1、集合Collection中存储的如果是自定义的类的对象，需要自定义类重写哪个方法？一定需要重写equals()方法
+①List接口时：
+重写equals（）方法
+②Set接口时：
+（HashSet、LinkedHashSet）:
+重写e
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-05
                             </span>
                         <span class="publish-author">
                             
@@ -1202,8 +1146,8 @@ String对象的字符内容是存储在一个字符数组value[]中的
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java%E5%B8%B8%E7%94%A8%E7%B1%BBString/">
-                        <span class="chip bg-color">java常用类String</span>
+                    <a href="/tags/java%E9%9B%86%E5%90%88/">
+                        <span class="chip bg-color">java集合</span>
                     </a>
                     
                 </div>
