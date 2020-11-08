@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>java每日一考22</title>
+      <link href="/2020/11/08/javatest22/"/>
+      <url>/2020/11/08/javatest22/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、如何遍历Map的key集，value集-key-value集，使用上泛型"><a href="#1、如何遍历Map的key集，value集-key-value集，使用上泛型" class="headerlink" title="1、如何遍历Map的key集，value集,key-value集，使用上泛型"></a>1、如何遍历Map的key集，value集,key-value集，使用上泛型</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java2;import java.util.*;import java.util.HashMap;/*** @author xiao-wang* @create 2020-11-08 19:59* 遍历map中key集、value集、key-value集*/public class MapTest &#123;    public static void main(String[] args) &#123;        HashMap<String,Integer> map = new HashMap<>();        map.put("AA",12);        map.put("BB",10);        map.put("CC",18);        map.put("ZZ",3);        map.put("AW",32);        Set<String> strings = map.keySet();        for(String key:strings)&#123;            Integer value = map.get(key);            System.out.println(key + "---->" + value );        &#125;    &#125;&#125;</code></pre><h3 id="2、-写出使用Iterator-和-增强for-循环遍历List的代码-使用上泛型"><a href="#2、-写出使用Iterator-和-增强for-循环遍历List的代码-使用上泛型" class="headerlink" title="2、 写出使用Iterator 和 增强for 循环遍历List的代码,使用上泛型"></a>2、 写出使用Iterator 和 增强for 循环遍历List<String>的代码,使用上泛型</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java2;import java.util.ArrayList;import java.util.Iterator;import java.util.List;/*** @author xiao-wang* @create 2020-11-08 20:12* 循环遍历List<String>*/public class ListTest &#123;    public static void main(String[] args) &#123;        List<String> list = new ArrayList<>();        list.add("Aa");        list.add("vv");        list.add("sd");        list.add("xw");        list.add("wy");//        Iterator<String> iterator = list.iterator();//        while(iterator.hasNext())&#123;//            System.out.println(iterator.next());//        &#125;        for(String s :list)&#123;            System.out.println(s);        &#125;    &#125;&#125;</code></pre><h3 id="3、用于遍历获取HashMap中的所有value，并存放在List中返回。考虑上集合中泛型的使用。"><a href="#3、用于遍历获取HashMap中的所有value，并存放在List中返回。考虑上集合中泛型的使用。" class="headerlink" title="3、用于遍历获取HashMap中的所有value，并存放在List中返回。考虑上集合中泛型的使用。"></a>3、用于遍历获取HashMap<String,String>中的所有value，并存放在List中返回。考虑上集合中泛型的使用。</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java2;import java.util.*;/*** @author xiao-wang* @create 2020-11-08 20:18* 遍历hashMap中所有value，并放在list中返回*/public class HashMap &#123;    public static void main(String[] args) &#123;        java.util.HashMap<String,String> map = new java.util.HashMap<>();        map.put("AA","jack");        map.put("CC","LUcy");        map.put("SS","jonh");        map.put("ff","amy");        map.put("tt","jack");        List<String> list = new ArrayList<>();        Collection<String> values = map.values();//        Iterator<String> iterator = values.iterator();//        while(iterator.hasNext())&#123;//            System.out.println(iterator.next());//        &#125;        for(String s: values)&#123;            System.out.println(s);        &#125;    &#125;&#125;</code></pre><h3 id="4、创建一个与a-txt文件同目录下的另外一个文件b-txt"><a href="#4、创建一个与a-txt文件同目录下的另外一个文件b-txt" class="headerlink" title="4、创建一个与a.txt文件同目录下的另外一个文件b.txt"></a>4、创建一个与a.txt文件同目录下的另外一个文件b.txt</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java2;import java.io.File;import java.io.IOException;/*** @author xiao-wang* @create 2020-11-08 20:26* 创建一个与a.txt同目录下的另一个文件b.txt*/public class IOTest &#123;    public static void main(String[] args) throws IOException &#123;        File file = new File("E:\\java\\java_code\\idea\\workspace_idea2\\day09\\a.txt");        File file1 = new File(file.getParent(), "b.txt");        boolean newFile = file1.createNewFile();        if(newFile)&#123;            System.out.println("创建成功");        &#125;    &#125;&#125;</code></pre><h3 id="5、Map接口中的常用方法有哪些"><a href="#5、Map接口中的常用方法有哪些" class="headerlink" title="5、Map接口中的常用方法有哪些"></a>5、Map接口中的常用方法有哪些</h3><p>增：put（K k,V v）</p><p>删：v  remove（K k）</p><p>改：put（K k,V v）</p><p>查：v  get（K k）</p><p>长度：int size（）</p><p>遍历:iteritor、foreach遍历器</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java基础学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java泛型 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java每日一考21</title>
       <link href="/2020/11/07/javatest21/"/>
       <url>/2020/11/07/javatest21/</url>
