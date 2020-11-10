@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="java每日一考22, HTML, CSS, JavaScript, JQuery, React, Vue.js等">
+    <meta name="keywords" content="java每日一考23, HTML, CSS, JavaScript, JQuery, React, Vue.js等">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>java每日一考22 | xiao-wang</title>
+    <title>java每日一考23 | xiao-wang</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">java每日一考22</h1>
+                    <h1 class="description center-align post-title">java每日一考23</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java%E6%B3%9B%E5%9E%8B/">
-                                <span class="chip bg-color">java泛型</span>
+                            <a href="/tags/java-IO%E6%B5%81/">
+                                <span class="chip bg-color">java IO流</span>
                             </a>
                         
                     </div>
@@ -459,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-08
+                    2020-11-10
                 </div>
                 
 
@@ -468,7 +468,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    503
+                    347
                 </div>
                 
 
@@ -485,109 +485,57 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1、如何遍历Map的key集，value集-key-value集，使用上泛型"><a href="#1、如何遍历Map的key集，value集-key-value集，使用上泛型" class="headerlink" title="1、如何遍历Map的key集，value集,key-value集，使用上泛型"></a>1、如何遍历Map的key集，value集,key-value集，使用上泛型</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java2;
-import java.util.*;
-import java.util.HashMap;
+                <h3 id="1、说明流的三种分类方式"><a href="#1、说明流的三种分类方式" class="headerlink" title="1、说明流的三种分类方式"></a>1、说明流的三种分类方式</h3><p>①流向：输入流、输出流</p>
+<p>②数据单位：字节流、字符流</p>
+<p>③流的角色：节点流、处理流</p>
+<h3 id="2、写出4个IO流中的抽象基类，4个文件流，4个缓冲流"><a href="#2、写出4个IO流中的抽象基类，4个文件流，4个缓冲流" class="headerlink" title="2、写出4个IO流中的抽象基类，4个文件流，4个缓冲流"></a>2、写出4个IO流中的抽象基类，4个文件流，4个缓冲流</h3><p><strong>抽象基类：</strong>InputStream,OutputStream,Reader,Writer</p>
+<p><strong>文件流：</strong>FileInputStream,FileOutputStream,FileReader,FileWriter</p>
+<p><strong>缓冲流:</strong> BufferedInputStream,BufferedOutputStream,BufferedReader,BufferedWriter</p>
+<h3 id="3、字节流与字符流的区别与使用情境"><a href="#3、字节流与字符流的区别与使用情境" class="headerlink" title="3、字节流与字符流的区别与使用情境"></a>3、字节流与字符流的区别与使用情境</h3><p><strong>字节流：</strong>read（byte[] buffer）/read（）     非文本文件</p>
+<p><strong>字符流：</strong>read（char[] cbuf）/read（）         文本文件</p>
+<h3 id="4、使用缓冲流实现a-jpg文件复制为b-jpg文件的操作"><a href="#4、使用缓冲流实现a-jpg文件复制为b-jpg文件的操作" class="headerlink" title="4、使用缓冲流实现a.jpg文件复制为b.jpg文件的操作"></a>4、使用缓冲流实现a.jpg文件复制为b.jpg文件的操作</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java4;
+import java.io.*;
 /**
 * @author xiao-wang
-* @create 2020-11-08 19:59
-* 遍历map中key集、value集、key-value集
+* @create 2020-11-10 11:10
 */
-public class MapTest &#123;
-    public static void main(String[] args) &#123;
-        HashMap<String,Integer> map = new HashMap<>();
-        map.put("AA",12);
-        map.put("BB",10);
-        map.put("CC",18);
-        map.put("ZZ",3);
-        map.put("AW",32);
-        Set<String> strings = map.keySet();
-        for(String key:strings)&#123;
-            Integer value = map.get(key);
-            System.out.println(key + "---->" + value );
+public class BufferedStream &#123;
+    public static void main(String[] args)&#123;
+        BufferedInputStream bis = null;
+        BufferedOutputStream bos = null;
+        try &#123;
+            bis = new BufferedInputStream(new FileInputStream("day09\\下载.png"));
+            bos = new BufferedOutputStream(new FileOutputStream("day09\\下载1.png"));
+            int len;
+            byte[] cbuf = new byte[10];
+            while((len = bis.read(cbuf)) != -1)&#123;
+                bos.write(cbuf,0,len);
+            &#125;
+        &#125; catch (IOException e) &#123;
+            e.printStackTrace();
+        &#125; finally &#123;
+            if(bis != null)&#123;
+                try &#123;
+                    bis.close();
+                &#125; catch (IOException e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
+            if(bos != null)&#123;
+                try &#123;
+                    bos.close();
+                &#125; catch (IOException e) &#123;
+                    e.printStackTrace();
+                &#125;
+            &#125;
         &#125;
     &#125;
 &#125;
 </code></pre>
-<h3 id="2、-写出使用Iterator-和-增强for-循环遍历List的代码-使用上泛型"><a href="#2、-写出使用Iterator-和-增强for-循环遍历List的代码-使用上泛型" class="headerlink" title="2、 写出使用Iterator 和 增强for 循环遍历List的代码,使用上泛型"></a>2、 写出使用Iterator 和 增强for 循环遍历List<String>的代码,使用上泛型</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java2;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-/**
-* @author xiao-wang
-* @create 2020-11-08 20:12
-* 循环遍历List<String>
-*/
-public class ListTest &#123;
-    public static void main(String[] args) &#123;
-        List<String> list = new ArrayList<>();
-        list.add("Aa");
-        list.add("vv");
-        list.add("sd");
-        list.add("xw");
-        list.add("wy");
-//        Iterator<String> iterator = list.iterator();
-//        while(iterator.hasNext())&#123;
-//            System.out.println(iterator.next());
-//        &#125;
-        for(String s :list)&#123;
-            System.out.println(s);
-        &#125;
-    &#125;
-&#125;
-</code></pre>
-<h3 id="3、用于遍历获取HashMap中的所有value，并存放在List中返回。考虑上集合中泛型的使用。"><a href="#3、用于遍历获取HashMap中的所有value，并存放在List中返回。考虑上集合中泛型的使用。" class="headerlink" title="3、用于遍历获取HashMap中的所有value，并存放在List中返回。考虑上集合中泛型的使用。"></a>3、用于遍历获取HashMap<String,String>中的所有value，并存放在List中返回。考虑上集合中泛型的使用。</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java2;
-import java.util.*;
-/**
-* @author xiao-wang
-* @create 2020-11-08 20:18
-* 遍历hashMap中所有value，并放在list中返回
-*/
-public class HashMap &#123;
-    public static void main(String[] args) &#123;
-        java.util.HashMap<String,String> map = new java.util.HashMap<>();
-        map.put("AA","jack");
-        map.put("CC","LUcy");
-        map.put("SS","jonh");
-        map.put("ff","amy");
-        map.put("tt","jack");
-        List<String> list = new ArrayList<>();
-        Collection<String> values = map.values();
-//        Iterator<String> iterator = values.iterator();
-//        while(iterator.hasNext())&#123;
-//            System.out.println(iterator.next());
-//        &#125;
-        for(String s: values)&#123;
-            System.out.println(s);
-        &#125;
-    &#125;
-&#125;
-</code></pre>
-<h3 id="4、创建一个与a-txt文件同目录下的另外一个文件b-txt"><a href="#4、创建一个与a-txt文件同目录下的另外一个文件b-txt" class="headerlink" title="4、创建一个与a.txt文件同目录下的另外一个文件b.txt"></a>4、创建一个与a.txt文件同目录下的另外一个文件b.txt</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java2;
-import java.io.File;
-import java.io.IOException;
-/**
-* @author xiao-wang
-* @create 2020-11-08 20:26
-* 创建一个与a.txt同目录下的另一个文件b.txt
-*/
-public class IOTest &#123;
-    public static void main(String[] args) throws IOException &#123;
-        File file = new File("E:\\java\\java_code\\idea\\workspace_idea2\\day09\\a.txt");
-        File file1 = new File(file.getParent(), "b.txt");
-        boolean newFile = file1.createNewFile();
-        if(newFile)&#123;
-            System.out.println("创建成功");
-        &#125;
-    &#125;
-&#125;
-</code></pre>
-<h3 id="5、Map接口中的常用方法有哪些"><a href="#5、Map接口中的常用方法有哪些" class="headerlink" title="5、Map接口中的常用方法有哪些"></a>5、Map接口中的常用方法有哪些</h3><p>增：put（K k,V v）</p>
-<p>删：v  remove（K k）</p>
-<p>改：put（K k,V v）</p>
-<p>查：v  get（K k）</p>
-<p>长度：int size（）</p>
-<p>遍历:iteritor、foreach遍历器</p>
+<h3 id="5、转换流是哪两个类，分别的作用是什么？请分别创建两个类的对象"><a href="#5、转换流是哪两个类，分别的作用是什么？请分别创建两个类的对象" class="headerlink" title="5、转换流是哪两个类，分别的作用是什么？请分别创建两个类的对象"></a>5、转换流是哪两个类，分别的作用是什么？请分别创建两个类的对象</h3><p><strong>转换流：</strong><br>InputStreamReader：将输入的字节流转换成输入的字符流</p>
+<p>OutputStreamWriter：将输出的字符流转换成输出的字节流</p>
+<p>InputStreamReader isr = new InputStreamReader（new FileInputStream（”a.txt”）,”utf-8”）;</p>
+<p>OutputStreamWriter osw = new OutputStreamWriter（new FileOutputStream（”b.txt”）, “gbk”）;</p>
 
             </div>
             <hr/>
@@ -613,7 +561,7 @@ public class IOTest &#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xiao-wang-cn.github.io/2020/11/08/javatest22/">https://xiao-wang-cn.github.io/2020/11/08/javatest22/</a>
+                    <a href="https://xiao-wang-cn.github.io/2020/11/10/javatest23/">https://xiao-wang-cn.github.io/2020/11/10/javatest23/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -651,8 +599,8 @@ public class IOTest &#123;
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/java%E6%B3%9B%E5%9E%8B/">
-                                    <span class="chip bg-color">java泛型</span>
+                                <a href="/tags/java-IO%E6%B5%81/">
+                                    <span class="chip bg-color">java IO流</span>
                                 </a>
                             
                         </div>
@@ -1083,9 +1031,10 @@ public class IOTest &#123;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/11/10/javatest23/">
                     <div class="card-image">
@@ -1106,9 +1055,9 @@ public class IOTest &#123;
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1121,6 +1070,7 @@ public class IOTest &#123;
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1139,26 +1089,28 @@ public class IOTest &#123;
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/07/javatest21/">
+                <a href="/2020/11/08/javatest22/">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/22.jpg" class="responsive-img" alt="java每日一考21">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/21.jpg" class="responsive-img" alt="java每日一考22">
                         
-                        <span class="card-title">java每日一考21</span>
+                        <span class="card-title">java每日一考22</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1、Map存储数据的特点是什么？并指明key、value、entry存储数据的特点Map存储双列数据，存储key-value对数据
-key:无序的、不可重复的——&gt;Set存储
-value：无序的、可重复的——-&gt;Collecti
+                            1、如何遍历Map的key集，value集,key-value集，使用上泛型package xiao.wang.java2;
+import java.util.*;
+import java.util.HashMap;
+/**
+* @auth
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-08
                             </span>
                         <span class="publish-author">
                             
@@ -1175,8 +1127,8 @@ value：无序的、可重复的——-&gt;Collecti
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java%E9%9B%86%E5%90%88%E4%B8%ADMap%E6%8E%A5%E5%8F%A3/">
-                        <span class="chip bg-color">java集合中Map接口</span>
+                    <a href="/tags/java%E6%B3%9B%E5%9E%8B/">
+                        <span class="chip bg-color">java泛型</span>
                     </a>
                     
                 </div>

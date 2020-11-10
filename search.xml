@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>java每日一考23</title>
+      <link href="/2020/11/10/javatest23/"/>
+      <url>/2020/11/10/javatest23/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、说明流的三种分类方式"><a href="#1、说明流的三种分类方式" class="headerlink" title="1、说明流的三种分类方式"></a>1、说明流的三种分类方式</h3><p>①流向：输入流、输出流</p><p>②数据单位：字节流、字符流</p><p>③流的角色：节点流、处理流</p><h3 id="2、写出4个IO流中的抽象基类，4个文件流，4个缓冲流"><a href="#2、写出4个IO流中的抽象基类，4个文件流，4个缓冲流" class="headerlink" title="2、写出4个IO流中的抽象基类，4个文件流，4个缓冲流"></a>2、写出4个IO流中的抽象基类，4个文件流，4个缓冲流</h3><p><strong>抽象基类：</strong>InputStream,OutputStream,Reader,Writer</p><p><strong>文件流：</strong>FileInputStream,FileOutputStream,FileReader,FileWriter</p><p><strong>缓冲流:</strong> BufferedInputStream,BufferedOutputStream,BufferedReader,BufferedWriter</p><h3 id="3、字节流与字符流的区别与使用情境"><a href="#3、字节流与字符流的区别与使用情境" class="headerlink" title="3、字节流与字符流的区别与使用情境"></a>3、字节流与字符流的区别与使用情境</h3><p><strong>字节流：</strong>read（byte[] buffer）/read（）     非文本文件</p><p><strong>字符流：</strong>read（char[] cbuf）/read（）         文本文件</p><h3 id="4、使用缓冲流实现a-jpg文件复制为b-jpg文件的操作"><a href="#4、使用缓冲流实现a-jpg文件复制为b-jpg文件的操作" class="headerlink" title="4、使用缓冲流实现a.jpg文件复制为b.jpg文件的操作"></a>4、使用缓冲流实现a.jpg文件复制为b.jpg文件的操作</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java4;import java.io.*;/*** @author xiao-wang* @create 2020-11-10 11:10*/public class BufferedStream &#123;    public static void main(String[] args)&#123;        BufferedInputStream bis = null;        BufferedOutputStream bos = null;        try &#123;            bis = new BufferedInputStream(new FileInputStream("day09\\下载.png"));            bos = new BufferedOutputStream(new FileOutputStream("day09\\下载1.png"));            int len;            byte[] cbuf = new byte[10];            while((len = bis.read(cbuf)) != -1)&#123;                bos.write(cbuf,0,len);            &#125;        &#125; catch (IOException e) &#123;            e.printStackTrace();        &#125; finally &#123;            if(bis != null)&#123;                try &#123;                    bis.close();                &#125; catch (IOException e) &#123;                    e.printStackTrace();                &#125;            &#125;            if(bos != null)&#123;                try &#123;                    bos.close();                &#125; catch (IOException e) &#123;                    e.printStackTrace();                &#125;            &#125;        &#125;    &#125;&#125;</code></pre><h3 id="5、转换流是哪两个类，分别的作用是什么？请分别创建两个类的对象"><a href="#5、转换流是哪两个类，分别的作用是什么？请分别创建两个类的对象" class="headerlink" title="5、转换流是哪两个类，分别的作用是什么？请分别创建两个类的对象"></a>5、转换流是哪两个类，分别的作用是什么？请分别创建两个类的对象</h3><p><strong>转换流：</strong><br>InputStreamReader：将输入的字节流转换成输入的字符流</p><p>OutputStreamWriter：将输出的字符流转换成输出的字节流</p><p>InputStreamReader isr = new InputStreamReader（new FileInputStream（”a.txt”）,”utf-8”）;</p><p>OutputStreamWriter osw = new OutputStreamWriter（new FileOutputStream（”b.txt”）, “gbk”）;</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> java基础学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java IO流 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java每日一考22</title>
       <link href="/2020/11/08/javatest22/"/>
       <url>/2020/11/08/javatest22/</url>
