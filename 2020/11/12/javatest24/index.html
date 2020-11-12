@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="java每日一考23, HTML, CSS, JavaScript, JQuery, React, Vue.js等">
+    <meta name="keywords" content="java每日一考24, HTML, CSS, JavaScript, JQuery, React, Vue.js等">
     <meta name="description" content="专注于Web,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>java每日一考23 | xiao-wang</title>
+    <title>java每日一考24 | xiao-wang</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">java每日一考23</h1>
+                    <h1 class="description center-align post-title">java每日一考24</h1>
                 </div>
             </div>
         </div>
@@ -434,8 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java-IO%E6%B5%81/">
-                                <span class="chip bg-color">java IO流</span>
+                            <a href="/tags/java-IO%E6%B5%81%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">
+                                <span class="chip bg-color">java IO流与网络编程</span>
                             </a>
                         
                     </div>
@@ -459,7 +459,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-10
+                    2020-11-12
                 </div>
                 
 
@@ -468,7 +468,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    347
+                    293
                 </div>
                 
 
@@ -485,57 +485,21 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1、说明流的三种分类方式"><a href="#1、说明流的三种分类方式" class="headerlink" title="1、说明流的三种分类方式"></a>1、说明流的三种分类方式</h3><p>①流向：输入流、输出流</p>
-<p>②数据单位：字节流、字符流</p>
-<p>③流的角色：节点流、处理流</p>
-<h3 id="2、写出4个IO流中的抽象基类，4个文件流，4个缓冲流"><a href="#2、写出4个IO流中的抽象基类，4个文件流，4个缓冲流" class="headerlink" title="2、写出4个IO流中的抽象基类，4个文件流，4个缓冲流"></a>2、写出4个IO流中的抽象基类，4个文件流，4个缓冲流</h3><p><strong>抽象基类：</strong>InputStream,OutputStream,Reader,Writer</p>
-<p><strong>文件流：</strong>FileInputStream,FileOutputStream,FileReader,FileWriter</p>
-<p><strong>缓冲流:</strong> BufferedInputStream,BufferedOutputStream,BufferedReader,BufferedWriter</p>
-<h3 id="3、字节流与字符流的区别与使用情境"><a href="#3、字节流与字符流的区别与使用情境" class="headerlink" title="3、字节流与字符流的区别与使用情境"></a>3、字节流与字符流的区别与使用情境</h3><p><strong>字节流：</strong>read（byte[] buffer）/read（）     非文本文件</p>
-<p><strong>字符流：</strong>read（char[] cbuf）/read（）         文本文件</p>
-<h3 id="4、使用缓冲流实现a-jpg文件复制为b-jpg文件的操作"><a href="#4、使用缓冲流实现a-jpg文件复制为b-jpg文件的操作" class="headerlink" title="4、使用缓冲流实现a.jpg文件复制为b.jpg文件的操作"></a>4、使用缓冲流实现a.jpg文件复制为b.jpg文件的操作</h3><pre class=" language-lang-bash"><code class="language-lang-bash">package xiao.wang.java4;
-import java.io.*;
-/**
-* @author xiao-wang
-* @create 2020-11-10 11:10
-*/
-public class BufferedStream &#123;
-    public static void main(String[] args)&#123;
-        BufferedInputStream bis = null;
-        BufferedOutputStream bos = null;
-        try &#123;
-            bis = new BufferedInputStream(new FileInputStream("day09\\下载.png"));
-            bos = new BufferedOutputStream(new FileOutputStream("day09\\下载1.png"));
-            int len;
-            byte[] cbuf = new byte[10];
-            while((len = bis.read(cbuf)) != -1)&#123;
-                bos.write(cbuf,0,len);
-            &#125;
-        &#125; catch (IOException e) &#123;
-            e.printStackTrace();
-        &#125; finally &#123;
-            if(bis != null)&#123;
-                try &#123;
-                    bis.close();
-                &#125; catch (IOException e) &#123;
-                    e.printStackTrace();
-                &#125;
-            &#125;
-            if(bos != null)&#123;
-                try &#123;
-                    bos.close();
-                &#125; catch (IOException e) &#123;
-                    e.printStackTrace();
-                &#125;
-            &#125;
-        &#125;
-    &#125;
-&#125;
-</code></pre>
-<h3 id="5、转换流是哪两个类，分别的作用是什么？请分别创建两个类的对象"><a href="#5、转换流是哪两个类，分别的作用是什么？请分别创建两个类的对象" class="headerlink" title="5、转换流是哪两个类，分别的作用是什么？请分别创建两个类的对象"></a>5、转换流是哪两个类，分别的作用是什么？请分别创建两个类的对象</h3><p><strong>转换流：</strong><br>InputStreamReader：将输入的字节流转换成输入的字符流</p>
-<p>OutputStreamWriter：将输出的字符流转换成输出的字节流</p>
-<p>InputStreamReader isr = new InputStreamReader（new FileInputStream（”a.txt”）,”utf-8”）;</p>
-<p>OutputStreamWriter osw = new OutputStreamWriter（new FileOutputStream（”b.txt”）, “gbk”）;</p>
+                <h3 id="1、一个IP对应着哪个类的一个对象？实例化这个类的两种方式是？两个常用的方法是？"><a href="#1、一个IP对应着哪个类的一个对象？实例化这个类的两种方式是？两个常用的方法是？" class="headerlink" title="1、一个IP对应着哪个类的一个对象？实例化这个类的两种方式是？两个常用的方法是？"></a>1、一个IP对应着哪个类的一个对象？实例化这个类的两种方式是？两个常用的方法是？</h3><p>一个IP对应着哪个类的一个对象:InetAddress</p>
+<p>实例化方式：</p>
+<p>InetAddress.getByName（String host）;</p>
+<p>InetAddress.getLocalHost（）;<br>两个常用方法：</p>
+<p>getHostName（）;</p>
+<p>getHostAddress（）;</p>
+<h3 id="2、传输层的TCP协议和UDP协议的主要区别是："><a href="#2、传输层的TCP协议和UDP协议的主要区别是：" class="headerlink" title="2、传输层的TCP协议和UDP协议的主要区别是："></a>2、传输层的TCP协议和UDP协议的主要区别是：</h3><p>TCP:可靠的数据传输（三次握手），进行大量数据传输，效率低</p>
+<p>UDP:不可靠的数据传输，以数据报形式发送，数据报限定为64k，效率高</p>
+<h3 id="3、什么是URL，你能写出一个URL吗？"><a href="#3、什么是URL，你能写出一个URL吗？" class="headerlink" title="3、什么是URL，你能写出一个URL吗？"></a>3、什么是URL，你能写出一个URL吗？</h3><p>URL；统一资源定位符</p>
+<p>URL url = new URL（“<a target="_blank" rel="noopener" href="http://192.168.14.100:8080/examples/hello.txt?username=Tom”）">http://192.168.14.100:8080/examples/hello.txt?username=Tom”）</a>;</p>
+<h3 id="4、谈谈你对对象序列化机制的理解"><a href="#4、谈谈你对对象序列化机制的理解" class="headerlink" title="4、谈谈你对对象序列化机制的理解"></a>4、谈谈你对对象序列化机制的理解</h3><p>序列化过程：把对象以流的方式写入到文件中保存，可以持久保存这个对象的信息</p>
+<p>反序列化过程：从文件中读取出来，重构对象</p>
+<h3 id="5、对象要想实现序列化，需要满足那几个条件？"><a href="#5、对象要想实现序列化，需要满足那几个条件？" class="headerlink" title="5、对象要想实现序列化，需要满足那几个条件？"></a>5、对象要想实现序列化，需要满足那几个条件？</h3><p>①实现接口：Serializable</p>
+<p>②对象所在类提供常量：序列版本号</p>
+<p>③要求对象的属性也必须是可序列化的  </p>
 
             </div>
             <hr/>
@@ -561,7 +525,7 @@ public class BufferedStream &#123;
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://xiao-wang-cn.github.io/2020/11/10/javatest23/">https://xiao-wang-cn.github.io/2020/11/10/javatest23/</a>
+                    <a href="https://xiao-wang-cn.github.io/2020/11/12/javatest24/">https://xiao-wang-cn.github.io/2020/11/12/javatest24/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -599,8 +563,8 @@ public class BufferedStream &#123;
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/java-IO%E6%B5%81/">
-                                    <span class="chip bg-color">java IO流</span>
+                                <a href="/tags/java-IO%E6%B5%81%E4%B8%8E%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">
+                                    <span class="chip bg-color">java IO流与网络编程</span>
                                 </a>
                             
                         </div>
@@ -1031,9 +995,10 @@ public class BufferedStream &#123;
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/11/12/javatest24/">
                     <div class="card-image">
@@ -1054,9 +1019,9 @@ InetAddre
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1069,6 +1034,7 @@ InetAddre
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1087,28 +1053,27 @@ InetAddre
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/08/javatest22/">
+                <a href="/2020/11/10/javatest23/">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/21.jpg" class="responsive-img" alt="java每日一考22">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/20.jpg" class="responsive-img" alt="java每日一考23">
                         
-                        <span class="card-title">java每日一考22</span>
+                        <span class="card-title">java每日一考23</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1、如何遍历Map的key集，value集,key-value集，使用上泛型package xiao.wang.java2;
-import java.util.*;
-import java.util.HashMap;
-/**
-* @auth
+                            1、说明流的三种分类方式①流向：输入流、输出流
+②数据单位：字节流、字符流
+③流的角色：节点流、处理流
+2、写出4个IO流中的抽象基类，4个文件流，4个缓冲流抽象基类：InputStream,OutputStream,Reader,Writ
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-10
                             </span>
                         <span class="publish-author">
                             
@@ -1125,8 +1090,8 @@ import java.util.HashMap;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java%E6%B3%9B%E5%9E%8B/">
-                        <span class="chip bg-color">java泛型</span>
+                    <a href="/tags/java-IO%E6%B5%81/">
+                        <span class="chip bg-color">java IO流</span>
                     </a>
                     
                 </div>
