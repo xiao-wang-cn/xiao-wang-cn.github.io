@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>javatest25</title>
+      <link href="/2020/11/13/javatest25/"/>
+      <url>/2020/11/13/javatest25/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1、写出获取Class实例的三种常见方式："><a href="#1、写出获取Class实例的三种常见方式：" class="headerlink" title="1、写出获取Class实例的三种常见方式："></a>1、写出获取Class实例的三种常见方式：</h3><pre class=" language-lang-bash"><code class="language-lang-bash">Class clazz1 = Person.classClass clazz2 = person.getClass()Class clazz3 = Class.forName(String classpath)</code></pre><h3 id="2、谈谈你对Class类的理解"><a href="#2、谈谈你对Class类的理解" class="headerlink" title="2、谈谈你对Class类的理解"></a>2、谈谈你对Class类的理解</h3><p>Class实例对应着加载到内存中的一个运行时类</p><p>加载到内存中的运行时类，会缓存一定的时间。在此时间之内，我们可以通过不同的方式来获取此运行时类</p><h3 id="3、创建Class对应运行时类的对象的通用方法，代码实现。以及这样操作，需要对应的运行时类构造器-方面满足的要求"><a href="#3、创建Class对应运行时类的对象的通用方法，代码实现。以及这样操作，需要对应的运行时类构造器-方面满足的要求" class="headerlink" title="3、创建Class对应运行时类的对象的通用方法，代码实现。以及这样操作，需要对应的运行时类构造器 方面满足的要求"></a>3、创建Class对应运行时类的对象的通用方法，代码实现。以及这样操作，需要对应的运行时类构造器 方面满足的要求</h3><p>通用方法：clazz.newInstance（）;</p><p>要求：</p><p>①必须有空参的构造器</p><p>②权限修饰符权限得够。一般设置为public</p><h3 id="4、如何调用方法show"><a href="#4、如何调用方法show" class="headerlink" title="4、如何调用方法show()"></a>4、如何调用方法show()</h3><p>类声明如下：</p><pre class=" language-lang-bash"><code class="language-lang-bash">class User&#123;    public void show()&#123;        System.out.println("我是一个中国人！");    &#125;&#125;</code></pre><pre class=" language-lang-bash"><code class="language-lang-bash">Class clazz = User.class;User u = (User) clazz.newInstance();Method show = clazz.getDeclaredMethod("show");Object invoke = show.invoke(u);</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> java基础学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java 反射 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>java每日一考24</title>
       <link href="/2020/11/12/javatest24/"/>
       <url>/2020/11/12/javatest24/</url>
       
-        <content type="html"><![CDATA[<h3 id="1、一个IP对应着哪个类的一个对象？实例化这个类的两种方式是？两个常用的方法是？"><a href="#1、一个IP对应着哪个类的一个对象？实例化这个类的两种方式是？两个常用的方法是？" class="headerlink" title="1、一个IP对应着哪个类的一个对象？实例化这个类的两种方式是？两个常用的方法是？"></a>1、一个IP对应着哪个类的一个对象？实例化这个类的两种方式是？两个常用的方法是？</h3><p>一个IP对应着哪个类的一个对象:InetAddress</p><p>实例化方式：</p><p>InetAddress.getByName（String host）;</p><p>InetAddress.getLocalHost（）;<br>两个常用方法：</p><p>getHostName（）;</p><p>getHostAddress（）;</p><h3 id="2、传输层的TCP协议和UDP协议的主要区别是："><a href="#2、传输层的TCP协议和UDP协议的主要区别是：" class="headerlink" title="2、传输层的TCP协议和UDP协议的主要区别是："></a>2、传输层的TCP协议和UDP协议的主要区别是：</h3><p>TCP:可靠的数据传输（三次握手），进行大量数据传输，效率低</p><p>UDP:不可靠的数据传输，以数据报形式发送，数据报限定为64k，效率高</p><h3 id="3、什么是URL，你能写出一个URL吗？"><a href="#3、什么是URL，你能写出一个URL吗？" class="headerlink" title="3、什么是URL，你能写出一个URL吗？"></a>3、什么是URL，你能写出一个URL吗？</h3><p>URL；统一资源定位符</p><p>URL url = new URL（“<a href="http://192.168.14.100:8080/examples/hello.txt?username=Tom”）">http://192.168.14.100:8080/examples/hello.txt?username=Tom”）</a>;</p><h3 id="4、谈谈你对对象序列化机制的理解"><a href="#4、谈谈你对对象序列化机制的理解" class="headerlink" title="4、谈谈你对对象序列化机制的理解"></a>4、谈谈你对对象序列化机制的理解</h3><p>序列化过程：把对象以流的方式写入到文件中保存，可以持久保存这个对象的信息</p><p>反序列化过程：从文件中读取出来，重构对象</p><h3 id="5、对象要想实现序列化，需要满足那几个条件？"><a href="#5、对象要想实现序列化，需要满足那几个条件？" class="headerlink" title="5、对象要想实现序列化，需要满足那几个条件？"></a>5、对象要想实现序列化，需要满足那几个条件？</h3><p>①实现接口：Serializable</p><p>②对象所在类提供常量：序列版本号</p><p>③要求对象的属性也必须是可序列化的  </p>]]></content>
+        <content type="html"><![CDATA[<h3 id="1、一个IP对应着哪个类的一个对象？实例化这个类的两种方式是？两个常用的方法是？"><a href="#1、一个IP对应着哪个类的一个对象？实例化这个类的两种方式是？两个常用的方法是？" class="headerlink" title="1、一个IP对应着哪个类的一个对象？实例化这个类的两种方式是？两个常用的方法是？"></a>1、一个IP对应着哪个类的一个对象？实例化这个类的两种方式是？两个常用的方法是？</h3><p>一个IP对应着哪个类的一个对象:<br>InetAddress</p><p>实例化方式：<br>InetAddress.getByName（String host）;</p><p>InetAddress.getLocalHost（）;</p><p>两个常用方法：<br>getHostName（）;</p><p>getHostAddress（）;</p><h3 id="2、传输层的TCP协议和UDP协议的主要区别是："><a href="#2、传输层的TCP协议和UDP协议的主要区别是：" class="headerlink" title="2、传输层的TCP协议和UDP协议的主要区别是："></a>2、传输层的TCP协议和UDP协议的主要区别是：</h3><p>TCP:可靠的数据传输（三次握手），进行大量数据传输，效率低</p><p>UDP:不可靠的数据传输，以数据报形式发送，数据报限定为64k，效率高</p><h3 id="3、什么是URL，你能写出一个URL吗？"><a href="#3、什么是URL，你能写出一个URL吗？" class="headerlink" title="3、什么是URL，你能写出一个URL吗？"></a>3、什么是URL，你能写出一个URL吗？</h3><p>URL；统一资源定位符</p><p>URL url = new URL（“<a href="http://192.168.14.100:8080/examples/hello.txt?username=Tom”）">http://192.168.14.100:8080/examples/hello.txt?username=Tom”）</a>;</p><h3 id="4、谈谈你对对象序列化机制的理解"><a href="#4、谈谈你对对象序列化机制的理解" class="headerlink" title="4、谈谈你对对象序列化机制的理解"></a>4、谈谈你对对象序列化机制的理解</h3><p>序列化过程：把对象以流的方式写入到文件中保存，可以持久保存这个对象的信息</p><p>反序列化过程：从文件中读取出来，重构对象</p><h3 id="5、对象要想实现序列化，需要满足那几个条件？"><a href="#5、对象要想实现序列化，需要满足那几个条件？" class="headerlink" title="5、对象要想实现序列化，需要满足那几个条件？"></a>5、对象要想实现序列化，需要满足那几个条件？</h3><p>①实现接口：Serializable</p><p>②对象所在类提供常量：序列版本号</p><p>③要求对象的属性也必须是可序列化的  </p>]]></content>
       
       
       <categories>
